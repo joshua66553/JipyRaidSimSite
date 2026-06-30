@@ -22,11 +22,13 @@ export async function getAccessiblePages(
 }
 
 export function parsePageContent(content: unknown): PageContent {
-	if (typeof content === 'object' && content !== null && 'html' in content) {
-		const html = (content as PageContent).html;
-		if (typeof html === 'string') return { html };
+	if (typeof content === 'object' && content !== null) {
+		const c = content as Partial<PageContent>;
+		const html = typeof c.html === 'string' ? c.html : '';
+		const markdown = typeof c.markdown === 'string' ? c.markdown : '';
+		return { markdown, html };
 	}
-	return { html: '' };
+	return { markdown: '', html: '' };
 }
 
 export async function updatePage(
@@ -56,6 +58,44 @@ export async function updatePage(
 		data: { pageSlug: slug, userId: data.updatedBy, action: 'update' }
 	});
 
+	return page;
+}
+
+export async function createPage(data: {
+	slug: string;
+	title: string;
+	description?: string | null;
+	content: PageContent;
+	allowedRoleIds?: string[];
+	allowedUserIds?: string[];
+	createdBy: string;
+}) {
+	const count = await prisma.page.count();
+	const page = await prisma.page.create({
+		data: {
+			slug: data.slug,
+			title: data.title,
+			description: data.description ?? null,
+			content: data.content,
+			sortOrder: count,
+			allowedRoleIds: data.allowedRoleIds ?? [],
+			allowedUserIds: data.allowedUserIds ?? [],
+			updatedBy: data.createdBy
+		}
+	});
+
+	await prisma.auditLog.create({
+		data: { pageSlug: data.slug, userId: data.createdBy, action: 'create' }
+	});
+
+	return page;
+}
+
+export async function deletePage(slug: string, userId: string) {
+	const page = await prisma.page.delete({ where: { slug } });
+	await prisma.auditLog.create({
+		data: { pageSlug: slug, userId, action: 'delete' }
+	});
 	return page;
 }
 

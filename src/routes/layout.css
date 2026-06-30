@@ -256,6 +256,24 @@ html {
 	background: rgba(255, 255, 255, 0.02);
 }
 
+/* jp-markdown code blocks render a <table> internally — stop the prose table
+   styles above from bleeding in (double borders, padding, uppercase, hover). */
+.prose-kb .jp-md-code-table {
+	margin: 0;
+	border: 0;
+	border-radius: 0;
+	overflow: visible;
+	font-size: inherit;
+}
+.prose-kb .jp-md-code-block td {
+	border-bottom: 0;
+	text-transform: none;
+	letter-spacing: normal;
+}
+.prose-kb .jp-md-code-block tbody tr:hover td {
+	background: transparent;
+}
+
 /* Callouts */
 .prose-kb .callout {
 	display: flex;

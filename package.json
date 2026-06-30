@@ -41,6 +41,7 @@
 		"@tiptap/extension-table-row": "^3.27.1",
 		"@tiptap/starter-kit": "^3.27.1",
 		"cheerio": "^1.2.0",
+		"jp-markdown": "^1.2.1",
 		"lucide-svelte": "^1.0.1",
 		"prisma": "^6.19.3"
 	},

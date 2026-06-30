@@ -1,10 +1,17 @@
 <script lang="ts">
 	import './layout.css';
+	import 'jp-markdown/code.css';
+	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	import Header from '$lib/components/layout/Header.svelte';
 	import SidebarNav from '$lib/components/layout/SidebarNav.svelte';
 
 	let { children, data } = $props();
+
+	// Enables copy-to-clipboard buttons on jp-markdown code blocks site-wide.
+	onMount(() => {
+		import('jp-markdown/code.js');
+	});
 
 	const isPublic = $derived(
 		$page.url.pathname.startsWith('/login') || $page.url.pathname.startsWith('/auth')
