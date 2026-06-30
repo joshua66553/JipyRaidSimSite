@@ -1,4 +1,7 @@
 export type PageContent = {
+	/** Markdown source authored in the editor (may be empty for legacy pages). */
+	markdown: string;
+	/** Pre-rendered HTML (generated from markdown server-side) used for display. */
 	html: string;
 };
 

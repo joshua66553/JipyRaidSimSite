@@ -3,39 +3,55 @@
 	import MarkdownEditor from '$lib/components/admin/MarkdownEditor.svelte';
 	import PageAccessControl from '$lib/components/admin/PageAccessControl.svelte';
 	import ContentRenderer from '$lib/components/content/ContentRenderer.svelte';
-	import { ArrowLeft, Eye, Save, Trash2, X, ExternalLink } from '@lucide/svelte';
+	import { ArrowLeft, Eye, Plus, X } from '@lucide/svelte';
 
 	let { data } = $props();
 
-	let title = $state(data.page.title);
-	let description = $state(data.page.description);
-	let markdown = $state(data.page.content.markdown || '');
-	let allowedRoleIds = $state([...data.page.allowedRoleIds]);
-	let allowedUserIds = $state([...data.page.allowedUserIds]);
+	let title = $state('');
+	let slug = $state('');
+	let slugEdited = $state(false);
+	let description = $state('');
+	let markdown = $state('');
+	let allowedRoleIds = $state<string[]>([]);
+	let allowedUserIds = $state<string[]>([]);
 
-	let saving = $state(false);
-	let deleting = $state(false);
+	let creating = $state(false);
 	let message = $state('');
 
 	let previewing = $state(false);
 	let previewLoading = $state(false);
 	let previewHtml = $state('');
 
-	async function save() {
-		saving = true;
+	function slugify(input: string) {
+		return input
+			.toLowerCase()
+			.trim()
+			.replace(/[^a-z0-9\s-]/g, '')
+			.replace(/\s+/g, '-')
+			.replace(/-+/g, '-')
+			.replace(/^-|-$/g, '');
+	}
+
+	// keep slug in sync with title until the user edits the slug manually
+	$effect(() => {
+		if (!slugEdited) slug = slugify(title);
+	});
+
+	async function create() {
+		creating = true;
 		message = '';
 		try {
-			const res = await fetch(`/api/pages/${data.page.slug}`, {
-				method: 'PATCH',
+			const res = await fetch('/api/pages', {
+				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({ title, description, markdown, allowedRoleIds, allowedUserIds })
+				body: JSON.stringify({ title, slug, description, markdown, allowedRoleIds, allowedUserIds })
 			});
 			if (!res.ok) throw new Error(await res.text());
-			message = 'Saved successfully';
+			const body = await res.json();
+			await goto(`/admin/${body.slug}`);
 		} catch (e) {
-			message = e instanceof Error ? e.message : 'Save failed';
-		} finally {
-			saving = false;
+			message = e instanceof Error ? e.message : 'Create failed';
+			creating = false;
 		}
 	}
 
@@ -56,23 +72,10 @@
 			previewLoading = false;
 		}
 	}
-
-	async function remove() {
-		if (!confirm(`Delete "${data.page.title}"? This cannot be undone.`)) return;
-		deleting = true;
-		try {
-			const res = await fetch(`/api/pages/${data.page.slug}`, { method: 'DELETE' });
-			if (!res.ok) throw new Error(await res.text());
-			await goto('/admin');
-		} catch (e) {
-			message = e instanceof Error ? e.message : 'Delete failed';
-			deleting = false;
-		}
-	}
 </script>
 
 <svelte:head>
-	<title>Edit {data.page.title} | Admin</title>
+	<title>New page | Admin</title>
 </svelte:head>
 
 <div class="mx-auto max-w-5xl">
@@ -84,20 +87,18 @@
 		Back to admin
 	</a>
 
-	<!-- Sticky action bar -->
 	<div
 		class="sticky top-0 z-10 -mx-4 mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-border bg-background/90 px-4 py-3 backdrop-blur md:-mx-10 md:px-10"
 	>
 		<div class="min-w-0">
-			<h1 class="truncate text-lg font-bold tracking-tight text-foreground">{title || 'Untitled'}</h1>
-			<p class="font-mono text-xs text-faint">/{data.page.slug}</p>
+			<h1 class="truncate text-lg font-bold tracking-tight text-foreground">
+				{title || 'New page'}
+			</h1>
+			<p class="font-mono text-xs text-faint">/{slug || 'slug'}</p>
 		</div>
 		<div class="flex items-center gap-2">
 			{#if message}
-				<span
-					class="mr-1 text-sm {message.includes('success') ? 'text-emerald-400' : 'text-red-400'}"
-					>{message}</span
-				>
+				<span class="mr-1 text-sm text-red-400">{message}</span>
 			{/if}
 			<button
 				type="button"
@@ -109,12 +110,12 @@
 			</button>
 			<button
 				type="button"
-				disabled={saving}
-				onclick={save}
+				disabled={creating || !title.trim() || !slug.trim()}
+				onclick={create}
 				class="inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-strong disabled:opacity-50"
 			>
-				<Save class="h-4 w-4" />
-				{saving ? 'Saving…' : 'Save'}
+				<Plus class="h-4 w-4" />
+				{creating ? 'Creating…' : 'Create page'}
 			</button>
 		</div>
 	</div>
@@ -126,19 +127,32 @@
 				<input
 					id="page-title"
 					bind:value={title}
-					class="w-full rounded-lg border border-border bg-elevated px-3 py-2 text-foreground transition-colors focus:border-primary focus:outline-none"
+					placeholder="e.g. Moderator Handbook"
+					class="w-full rounded-lg border border-border bg-elevated px-3 py-2 text-foreground transition-colors placeholder:text-faint focus:border-primary focus:outline-none"
 				/>
 			</div>
 			<div>
-				<label for="page-desc" class="mb-1.5 block text-xs font-medium text-muted"
-					>Description</label
-				>
+				<label for="page-slug" class="mb-1.5 block text-xs font-medium text-muted">
+					Slug <span class="text-faint">(URL)</span>
+				</label>
 				<input
-					id="page-desc"
-					bind:value={description}
-					class="w-full rounded-lg border border-border bg-elevated px-3 py-2 text-foreground transition-colors focus:border-primary focus:outline-none"
+					id="page-slug"
+					bind:value={slug}
+					oninput={() => (slugEdited = true)}
+					placeholder="moderator-handbook"
+					class="w-full rounded-lg border border-border bg-elevated px-3 py-2 font-mono text-sm text-foreground transition-colors placeholder:text-faint focus:border-primary focus:outline-none"
 				/>
 			</div>
+		</div>
+
+		<div>
+			<label for="page-desc" class="mb-1.5 block text-xs font-medium text-muted">Description</label>
+			<input
+				id="page-desc"
+				bind:value={description}
+				placeholder="Short summary shown under the page title"
+				class="w-full rounded-lg border border-border bg-elevated px-3 py-2 text-foreground transition-colors placeholder:text-faint focus:border-primary focus:outline-none"
+			/>
 		</div>
 
 		<PageAccessControl
@@ -150,28 +164,14 @@
 		/>
 
 		<div>
-			<div class="mb-1.5 flex items-center justify-between">
-				<label for="md-editor" class="text-xs font-medium text-muted">Content (Markdown)</label>
-				<span class="text-xs text-faint">Supports headings, tables, code blocks & more</span>
-			</div>
-			<MarkdownEditor bind:value={markdown} onupdate={(v) => (markdown = v)} />
-		</div>
-
-		<div class="flex items-center justify-between border-t border-border pt-5">
-			<button
-				type="button"
-				disabled={deleting}
-				onclick={remove}
-				class="inline-flex items-center gap-1.5 rounded-lg border border-red-500/30 bg-red-500/10 px-3 py-2 text-sm font-medium text-red-300 transition-colors hover:bg-red-500/20 disabled:opacity-50"
+			<label for="md-editor" class="mb-1.5 block text-xs font-medium text-muted"
+				>Content (Markdown)</label
 			>
-				<Trash2 class="h-4 w-4" />
-				{deleting ? 'Deleting…' : 'Delete page'}
-			</button>
+			<MarkdownEditor bind:value={markdown} onupdate={(v) => (markdown = v)} />
 		</div>
 	</div>
 </div>
 
-<!-- Full-screen preview overlay -->
 {#if previewing}
 	<div class="fixed inset-0 z-50 overflow-y-auto bg-background">
 		<div
@@ -182,25 +182,14 @@
 				<span class="font-medium text-foreground">Preview</span>
 				<span class="text-faint">— {title || 'Untitled'}</span>
 			</div>
-			<div class="flex items-center gap-2">
-				<a
-					href="/{data.page.slug}"
-					target="_blank"
-					rel="noopener"
-					class="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3 py-1.5 text-sm font-medium text-muted transition-colors hover:text-foreground"
-				>
-					<ExternalLink class="h-3.5 w-3.5" />
-					Live page
-				</a>
-				<button
-					type="button"
-					onclick={() => (previewing = false)}
-					class="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-1.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-strong"
-				>
-					<X class="h-4 w-4" />
-					Close
-				</button>
-			</div>
+			<button
+				type="button"
+				onclick={() => (previewing = false)}
+				class="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-1.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-strong"
+			>
+				<X class="h-4 w-4" />
+				Close
+			</button>
 		</div>
 
 		<div class="mx-auto max-w-4xl px-4 py-10 md:px-8">
