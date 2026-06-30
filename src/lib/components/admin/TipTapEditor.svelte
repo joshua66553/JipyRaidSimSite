@@ -24,7 +24,7 @@
 			editorProps: {
 				attributes: {
 					class:
-						'prose-kb min-h-[320px] rounded-lg border border-slate-700 bg-slate-950/50 p-4 focus:outline-none'
+						'prose-kb min-h-[320px] rounded-lg border border-border bg-background p-4 focus:outline-none focus:border-primary'
 				}
 			},
 			onUpdate: ({ editor: ed }) => {
@@ -44,25 +44,25 @@
 	});
 </script>
 
-<div class="mb-2 flex flex-wrap gap-2">
+<div class="mb-2 flex flex-wrap gap-1.5">
 	<button
 		type="button"
-		class="rounded bg-slate-800 px-2 py-1 text-xs text-slate-300 hover:bg-slate-700"
+		class="rounded-md border border-border bg-card px-2.5 py-1 text-xs font-medium text-muted transition-colors hover:border-border-strong hover:text-foreground"
 		onclick={() => editor?.chain().focus().toggleBold().run()}>Bold</button
 	>
 	<button
 		type="button"
-		class="rounded bg-slate-800 px-2 py-1 text-xs text-slate-300 hover:bg-slate-700"
+		class="rounded-md border border-border bg-card px-2.5 py-1 text-xs font-medium text-muted transition-colors hover:border-border-strong hover:text-foreground"
 		onclick={() => editor?.chain().focus().toggleHeading({ level: 2 }).run()}>H2</button
 	>
 	<button
 		type="button"
-		class="rounded bg-slate-800 px-2 py-1 text-xs text-slate-300 hover:bg-slate-700"
+		class="rounded-md border border-border bg-card px-2.5 py-1 text-xs font-medium text-muted transition-colors hover:border-border-strong hover:text-foreground"
 		onclick={() => editor?.chain().focus().toggleBulletList().run()}>List</button
 	>
 	<button
 		type="button"
-		class="rounded bg-slate-800 px-2 py-1 text-xs text-slate-300 hover:bg-slate-700"
+		class="rounded-md border border-border bg-card px-2.5 py-1 text-xs font-medium text-muted transition-colors hover:border-border-strong hover:text-foreground"
 		onclick={() =>
 			editor?.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()}
 		>Table</button

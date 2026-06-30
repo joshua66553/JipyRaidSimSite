@@ -43,28 +43,31 @@
 	<title>Edit {data.page.title} | Admin</title>
 </svelte:head>
 
-<a href="/admin" class="mb-4 inline-flex items-center gap-1 text-sm text-sky-400 hover:text-sky-300">
+<a
+	href="/admin"
+	class="mb-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary-soft transition-colors hover:text-foreground"
+>
 	<ArrowLeft class="h-4 w-4" />
 	Back to admin
 </a>
 
-<div class="grid gap-6 lg:grid-cols-2">
+<div class="grid gap-8 lg:grid-cols-2">
 	<div class="space-y-4">
-		<h1 class="text-xl font-bold text-white">Edit: {data.page.title}</h1>
+		<h1 class="text-xl font-bold tracking-tight text-foreground">Edit: {data.page.title}</h1>
 
 		<div>
-			<label class="mb-1 block text-xs font-medium text-slate-400">Title</label>
+			<label class="mb-1.5 block text-xs font-medium text-muted">Title</label>
 			<input
 				bind:value={title}
-				class="w-full rounded-lg border border-slate-700 bg-slate-800/50 px-3 py-2 text-white"
+				class="w-full rounded-lg border border-border bg-elevated px-3 py-2 text-foreground transition-colors focus:border-primary focus:outline-none"
 			/>
 		</div>
 
 		<div>
-			<label class="mb-1 block text-xs font-medium text-slate-400">Description</label>
+			<label class="mb-1.5 block text-xs font-medium text-muted">Description</label>
 			<input
 				bind:value={description}
-				class="w-full rounded-lg border border-slate-700 bg-slate-800/50 px-3 py-2 text-white"
+				class="w-full rounded-lg border border-border bg-elevated px-3 py-2 text-foreground transition-colors focus:border-primary focus:outline-none"
 			/>
 		</div>
 
@@ -77,7 +80,7 @@
 		/>
 
 		<div>
-			<label class="mb-1 block text-xs font-medium text-slate-400">Content</label>
+			<label class="mb-1.5 block text-xs font-medium text-muted">Content</label>
 			<TipTapEditor content={html} onupdate={(v) => (html = v)} />
 		</div>
 
@@ -86,7 +89,7 @@
 				type="button"
 				disabled={saving}
 				onclick={save}
-				class="rounded-lg bg-sky-500 px-4 py-2 text-sm font-medium text-white hover:bg-sky-400 disabled:opacity-50"
+				class="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-strong disabled:opacity-50"
 			>
 				{saving ? 'Saving…' : 'Save changes'}
 			</button>
@@ -99,7 +102,9 @@
 	</div>
 
 	<div>
-		<p class="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">Preview</p>
-		<ContentRenderer content={{ html }} />
+		<p class="mb-3 text-xs font-semibold uppercase tracking-wider text-faint">Live preview</p>
+		<div class="rounded-xl border border-border bg-card p-5">
+			<ContentRenderer content={{ html }} />
+		</div>
 	</div>
 </div>

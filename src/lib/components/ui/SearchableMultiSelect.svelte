@@ -67,17 +67,17 @@
 	<button
 		type="button"
 		onclick={() => (open = !open)}
-		class="flex w-full items-center justify-between rounded-lg border border-slate-700 bg-slate-800/50 px-3 py-2 text-left text-sm text-slate-300 hover:border-slate-600"
+		class="flex w-full items-center justify-between rounded-lg border border-border bg-elevated px-3 py-2 text-left text-sm text-muted transition-colors hover:border-border-strong"
 	>
 		<span class="truncate">{placeholder}</span>
-		<span class="text-slate-500">{selected.length} selected</span>
+		<span class="text-faint">{selected.length} selected</span>
 	</button>
 
 	{#if selectedOptions.length}
 		<div class="mt-2 flex flex-wrap gap-2">
 			{#each selectedOptions as opt (opt.id)}
 				<span
-					class="inline-flex items-center gap-1.5 rounded-full border border-slate-700 bg-slate-800 px-2.5 py-1 text-xs text-slate-200"
+					class="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-2.5 py-1 text-xs text-foreground"
 				>
 					{#if opt.avatar}
 						<img src={opt.avatar} alt="" class="h-4 w-4 rounded-full" />
@@ -90,7 +90,7 @@
 					{opt.label}
 					<button
 						type="button"
-						class="text-slate-400 hover:text-white"
+						class="text-faint hover:text-foreground"
 						onclick={() => remove(opt.id)}>×</button
 					>
 				</span>
@@ -100,34 +100,34 @@
 
 	{#if open}
 		<div
-			class="absolute z-20 mt-1 max-h-64 w-full overflow-auto rounded-lg border border-slate-700 bg-slate-900 shadow-xl"
+			class="absolute z-20 mt-1 max-h-64 w-full overflow-auto rounded-lg border border-border bg-surface shadow-xl"
 		>
 			{#if searchable}
-				<div class="border-b border-slate-800 p-2">
+				<div class="border-b border-border p-2">
 					<input
 						type="text"
 						value={query}
 						oninput={handleSearchInput}
 						placeholder="Search…"
-						class="w-full rounded-md border border-slate-700 bg-slate-800 px-3 py-1.5 text-sm text-white placeholder:text-slate-500 focus:border-sky-500 focus:outline-none"
+						class="w-full rounded-md border border-border bg-elevated px-3 py-1.5 text-sm text-foreground placeholder:text-faint focus:border-primary focus:outline-none"
 					/>
 				</div>
 			{/if}
 			{#if loading}
-				<p class="p-3 text-sm text-slate-500">Loading…</p>
+				<p class="p-3 text-sm text-faint">Loading…</p>
 			{:else if options.length === 0}
-				<p class="p-3 text-sm text-slate-500">No results</p>
+				<p class="p-3 text-sm text-faint">No results</p>
 			{:else}
 				<ul>
 					{#each options as opt (opt.id)}
 						<li>
 							<button
 								type="button"
-								class="flex w-full items-center gap-2 px-3 py-2 text-left text-sm hover:bg-slate-800 {selected.includes(
+								class="flex w-full items-center gap-2 px-3 py-2 text-left text-sm hover:bg-elevated {selected.includes(
 									opt.id
 								)
-									? 'bg-sky-500/10 text-sky-300'
-									: 'text-slate-300'}"
+									? 'bg-primary/10 text-primary-soft'
+									: 'text-muted'}"
 								onclick={() => toggle(opt.id)}
 							>
 								<input type="checkbox" checked={selected.includes(opt.id)} class="rounded" />
@@ -142,7 +142,7 @@
 								<span>
 									{opt.label}
 									{#if opt.sublabel}
-										<span class="text-slate-500"> @{opt.sublabel}</span>
+										<span class="text-faint"> @{opt.sublabel}</span>
 									{/if}
 								</span>
 							</button>

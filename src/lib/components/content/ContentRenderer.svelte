@@ -8,6 +8,6 @@
 	let { content }: Props = $props();
 </script>
 
-<article class="prose-kb rounded-2xl border border-slate-800 bg-slate-900/50 p-6 md:p-8">
+<div class="prose-kb">
 	{@html content.html}
-</article>
+</div>

@@ -77,9 +77,9 @@
 	});
 </script>
 
-<section class="rounded-xl border border-slate-800 bg-slate-900/40 p-4">
-	<h3 class="mb-1 text-sm font-semibold text-white">Access control</h3>
-	<p class="mb-4 text-xs text-slate-500">
+<section class="rounded-xl border border-border bg-card p-4">
+	<h3 class="mb-1 text-sm font-semibold text-foreground">Access control</h3>
+	<p class="mb-4 text-xs text-faint">
 		Leave both empty to allow all staff with the global role. Select roles or users to restrict this
 		page further.
 	</p>
@@ -92,7 +92,7 @@
 	{:else}
 		<div class="space-y-4">
 			<div>
-				<label class="mb-1 block text-xs font-medium text-slate-400">Allowed roles</label>
+				<label class="mb-1.5 block text-xs font-medium text-muted">Allowed roles</label>
 				<SearchableMultiSelect
 					options={roleOptions}
 					selected={allowedRoleIds}
@@ -102,7 +102,7 @@
 				/>
 			</div>
 			<div>
-				<label class="mb-1 block text-xs font-medium text-slate-400">Allowed users</label>
+				<label class="mb-1.5 block text-xs font-medium text-muted">Allowed users</label>
 				<SearchableMultiSelect
 					options={memberOptionsWithSelected}
 					selected={allowedUserIds}

@@ -1,7 +1,24 @@
 import { SvelteKitAuth, type SvelteKitAuthConfig } from '@auth/sveltekit';
 import Discord from '@auth/core/providers/discord';
 import { env } from '$env/dynamic/private';
+import { dev } from '$app/environment';
 import { getMemberRoleIds, getGuildId, avatarUrl } from '$lib/server/discord';
+
+/**
+ * Auth.js requires a `secret` to sign/encrypt session tokens.
+ * In production it comes from the AUTH_SECRET environment variable (read at
+ * runtime via $env/dynamic/private, so it is empty during the build step).
+ * In local/preview development we fall back to a stable dev-only value so the
+ * app doesn't hard-crash when the env var hasn't been configured yet.
+ *
+ * Note: this must NOT throw at module-load time, otherwise the SvelteKit build
+ * (which imports this module without runtime env vars) would fail.
+ */
+function resolveAuthSecret(): string | undefined {
+	if (env.AUTH_SECRET) return env.AUTH_SECRET;
+	if (dev) return 'dev-only-insecure-secret-change-me-in-production';
+	return undefined;
+}
 
 declare module '@auth/core/types' {
 	interface Session {
@@ -43,7 +60,7 @@ export const authOptions: SvelteKitAuthConfig = {
 			authorization: { params: { scope: 'identify email guilds.members.read' } }
 		})
 	],
-	secret: env.AUTH_SECRET,
+	secret: resolveAuthSecret(),
 	trustHost: true,
 	callbacks: {
 		async jwt({ token, account, profile }) {
