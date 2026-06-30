@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr" class="dark-mode ">
+
+<head>
+    <title>Moderation | Syndicated Knowledge Base</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="token" content="26PlAUAxuWpCLFpFTyIBuOV6iIxLQ7XGCgd3LNr5">
+    <meta name="base-url" content="..">
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Social Cards Meta -->
+    <meta property="og:title" content="Moderation | Syndicated Knowledge Base">
+    <meta property="og:url" content="./moderation">
+    <meta property="og:description" content="Being a moderator on Raid Simulator is a unique learning experience, designed to teach the basics of...">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../dist/styles.css?version=v26.05.1">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="256x256" href="../uploads/images/system/2024-01/IPLdiscord-jcg0teubv2.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="../uploads/images/system/2024-01/GPydiscord-jcg0teubv2.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../uploads/images/system/2024-01/GPydiscord-jcg0teubv2.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="../uploads/images/system/2024-01/Mlodiscord-jcg0teubv2.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="../uploads/images/system/2024-01/SRcdiscord-jcg0teubv2.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../uploads/images/system/2024-01/Fb4discord-jcg0teubv2.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="../manifest.json" crossorigin="use-credentials">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- OpenSearch -->
+    <link rel="search" type="application/opensearchdescription+xml" title="Syndicated Knowledge Base" href="../opensearch.xml">
+
+    <!-- Custom Styles & Head Content -->
+    <style>
+        :root {
+            --color-primary: #206ea7;
+            --color-primary-light: rgba(32, 110, 167, 0.15);
+            --color-link: #206ea7;
+            --color-bookshelf: #a94747;
+            --color-book: #077b70;
+            --color-chapter: #af4d0d;
+            --color-page: #206ea7;
+            --color-page-draft: #7e50b1;
+        }
+
+        :root.dark-mode {
+            --color-primary: #000000;
+            --color-primary-light: rgba(0, 0, 0, 0.15);
+            --color-link: #429fe3;
+            --color-bookshelf: #ff5454;
+            --color-book: #389f60;
+            --color-chapter: #ee7a2d;
+            --color-page: #429fe3;
+            --color-page-draft: #a66ce8;
+        }
+    </style>
+    <!-- Start: custom user content -->
+
+
+    <!-- End: custom user content -->
+
+
+    <!-- Translations for JS -->
+</head>
+
+<body class=" tri-layout ">
+
+    <a class="px-m py-s skip-to-content-link print-hidden" href="#main-content">Skip to main content</a>
+    <div component="notification" option:notification:type="success" option:notification:auto-hide="true" option:notification:show="false" style="display: none;" class="notification pos" role="alert">
+        <svg class="svg-icon" data-icon="check-circle" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path fill="none" d="M0 0h24v24H0z" />
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z" /></svg> <span></span>
+        <div class="dismiss"><svg class="svg-icon" data-icon="close" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" /></svg></div>
+    </div>
+
+    <div component="notification" option:notification:type="warning" option:notification:auto-hide="false" option:notification:show="false" style="display: none;" class="notification warning" role="alert">
+        <svg class="svg-icon" data-icon="info" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path fill="none" d="M0 0h24v24H0z" />
+            <path d="M11 17h2v-6h-2zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8M11 9h2V7h-2z" /></svg> <span></span>
+        <div class="dismiss"><svg class="svg-icon" data-icon="close" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" /></svg></div>
+    </div>
+
+    <div component="notification" option:notification:type="error" option:notification:auto-hide="false" option:notification:show="false" style="display: none;" class="notification neg" role="alert">
+        <svg class="svg-icon" data-icon="danger" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27zM12 17.3c-.72 0-1.3-.58-1.3-1.3s.58-1.3 1.3-1.3 1.3.58 1.3 1.3-.58 1.3-1.3 1.3m1-4.3h-2V7h2z" />
+            <path fill="none" d="M0 0h24v24H0z" /></svg> <span></span>
+        <div class="dismiss"><svg class="svg-icon" data-icon="close" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" /></svg></div>
+    </div>
+    <header id="header" component="header-mobile-toggle" class="primary-background px-xl grid print-hidden">
+        <div class="flex-container-row justify-space-between gap-s items-center">
+            <a href=".." data-shortcut="home_view" class="logo">
+                <img class="logo-image" src="../uploads/images/system/2024-01/discord-jcg0teubv2.png" alt="Logo">
+                <span class="logo-text">Syndicated Knowledge Base</span>
+            </a>
+            <div class="hide-over-l py-s">
+                <button type="button" refs="header-mobile-toggle@toggle" title="Expand Header Menu" aria-expanded="false" class="mobile-menu-toggle"><svg class="svg-icon" data-icon="more" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2" /></svg></button>
+            </div>
+        </div>
+
+        <div class="flex-container-column items-center justify-center hide-under-l">
+            <form component="global-search" action="../search" method="GET" class="search-box" role="search" tabindex="0">
+                <button id="header-search-box-button" refs="global-search@button" type="submit" aria-label="Search" tabindex="-1"><svg class="svg-icon" data-icon="search" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14" />
+                        <path fill="none" d="M0 0h24v24H0z" /></svg></button>
+                <input id="header-search-box-input" refs="global-search@input" type="text" name="term" data-shortcut="global_search" autocomplete="off" aria-label="Search" placeholder="Search" value="">
+                <div refs="global-search@suggestions" class="global-search-suggestions card">
+                    <div refs="global-search@loading" class="text-center px-m global-search-loading">
+                        <div class="loading-container">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div refs="global-search@suggestion-results" class="px-m"></div>
+                    <button class="text-button card-footer-link" type="submit">View All</button>
+                </div>
+            </form>
+        </div>
+
+        <nav refs="header-mobile-toggle@menu" class="header-links">
+            <div class="links text-center">
+                <a class="hide-over-l" href="../search"><svg class="svg-icon" data-icon="search" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14" />
+                        <path fill="none" d="M0 0h24v24H0z" /></svg>Search</a>
+                <a href="../shelves" data-shortcut="shelves_view"><svg class="svg-icon" data-icon="bookshelf" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path fill="none" d="M1.088 2.566h17.42v17.42H1.088z" />
+                        <path d="M4 20.058h15.892V22H4z" />
+                        <path fill="none" d="M2.902 1.477h17.42v17.42H2.903z" />
+                        <path d="M6.658 3.643V18h-2.38V3.643zm4.668 0V18H8.947V3.643zm3.396.213 5.613 13.214-2.19.93-5.613-13.214z" /></svg>Shelves</a>
+                <a href="../books" data-shortcut="books_view"><svg class="svg-icon" data-icon="books" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path d="M19.252 1.708H8.663a1.77 1.77 0 0 0-1.765 1.764v14.12c0 .97.794 1.764 1.765 1.764h10.59a1.77 1.77 0 0 0 1.764-1.765V3.472a1.77 1.77 0 0 0-1.765-1.764M8.663 3.472h4.412v7.06L10.87 9.208l-2.206 1.324z" />
+                        <path fill="none" d="M30.61 3.203h24v24h-24z" />
+                        <path d="M2.966 6.61v14c0 1.1.9 2 2 2h14v-2h-14v-14z" /></svg>Books</a>
+
+            </div>
+            <div class="dropdown-container" component="dropdown" option:dropdown:bubble-escapes="true">
+                <button class="user-name py-s hide-under-l" refs="dropdown@toggle" aria-haspopup="menu" aria-expanded="false" aria-label="Profile Menu">
+                    <img class="avatar" src="../uploads/images/user/2024-10/thumbs-30-30/M3IJgMHg9pD7Xc1L-mdtq8avfvs-avatar.png" alt="RSMODS">
+                    <span class="name">RSMODS</span> <svg class="svg-icon" data-icon="caret-down" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="m7 10 5 5 5-5z" />
+                        <path fill="none" d="M0 0h24v24H0z" /></svg> </button>
+                <ul refs="dropdown@menu" class="dropdown-menu" role="menu" aria-label="Profile Menu">
+                    <li>
+                        <a href="../favourites" role="menuitem" data-shortcut="favourites_view" class="icon-item">
+                            <svg class="svg-icon" data-icon="star" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <div>My Favourites</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../user/rsmods" role="menuitem" data-shortcut="profile_view" class="icon-item">
+                            <svg class="svg-icon" data-icon="user" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4" />
+                                <path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <div>View Profile</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../my-account" role="menuitem" class="icon-item">
+                            <svg class="svg-icon" data-icon="user-preferences" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <circle cx="10" cy="8" r="4" />
+                                <path d="M10.67 13.02c-.22-.01-.44-.02-.67-.02-2.42 0-4.68.67-6.61 1.82-.88.52-1.39 1.5-1.39 2.53V20h9.26a6.96 6.96 0 0 1-.59-6.98M20.75 16c0-.22-.03-.42-.06-.63l1.14-1.01-1-1.73-1.45.49q-.48-.405-1.08-.63L18 11h-2l-.3 1.49q-.6.225-1.08.63l-1.45-.49-1 1.73 1.14 1.01c-.03.21-.06.41-.06.63s.03.42.06.63l-1.14 1.01 1 1.73 1.45-.49q.48.405 1.08.63L16 21h2l.3-1.49q.6-.225 1.08-.63l1.45.49 1-1.73-1.14-1.01c.03-.21.06-.41.06-.63M17 18c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2" /></svg>
+                            <div>My Account</div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <hr>
+                    </li>
+                    <li>
+                        <form action="../preferences/toggle-dark-mode" method="post">
+                            <input type="hidden" name="_token" value="26PlAUAxuWpCLFpFTyIBuOV6iIxLQ7XGCgd3LNr5" autocomplete="off">
+                            <input type="hidden" name="_method" value="patch">
+                            <input type="hidden" name="_return" value="./moderation">
+                            <button class="icon-item" role=""><span><svg class="svg-icon" data-icon="light-mode" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M20 15.31 23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6" /></svg></span><span>Light Mode</span></button>
+                        </form>
+                    </li>
+                    <li role="presentation">
+                        <hr>
+                    </li>
+                    <li>
+                        <form action="../logout" method="post">
+                            <input type="hidden" name="_token" value="26PlAUAxuWpCLFpFTyIBuOV6iIxLQ7XGCgd3LNr5" autocomplete="off">
+                            <button class="icon-item" role="menuitem" data-shortcut="logout">
+                                <svg class="svg-icon" data-icon="logout" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path fill="none" d="M0 0h24v24H0z" />
+                                    <path d="m14.29 8.207 1.41-1.41 5 5-5 5-1.41-1.41 2.58-2.59H7.2v-2h9.67zM5 3h14a2 2 0 0 1 2 2v4h-2V5H5v14h14v-4h2v4a2 2 0 0 1-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2" /></svg>
+                                <div>Logout</div>
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="content" components="tri-layout" class="block">
+
+        <div class="tri-layout-mobile-tabs print-hidden">
+            <div class="grid half no-break no-gap">
+                <button type="button" refs="tri-layout@tab" data-tab="info" aria-label="Tab: Show Secondary Information" class="tri-layout-mobile-tab px-m py-m text-link">
+                    Info
+                </button>
+                <button type="button" refs="tri-layout@tab" data-tab="content" aria-label="Tab: Show Primary Content" aria-selected="true" class="tri-layout-mobile-tab px-m py-m text-link active">
+                    Content
+                </button>
+            </div>
+        </div>
+
+        <div refs="tri-layout@container" class="tri-layout-container">
+
+            <div class="tri-layout-sides print-hidden">
+                <div refs="tri-layout@sidebar-scroll-container" class="tri-layout-sides-content">
+                    <div class="tri-layout-right print-hidden">
+                        <aside refs="tri-layout@sidebar-scroll-container" class="tri-layout-right-contents">
+                            <div id="page-details" class="entity-details mb-xl">
+                                <h5>Details</h5>
+                                <div class="blended-links">
+                                    <div class="entity-meta">
+
+
+
+                                        <div class="entity-meta-item">
+                                            <svg class="svg-icon" data-icon="star" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <path fill="none" d="M0 0h24v24H0z" />
+                                                <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                <path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <div>
+                                                Created <span title="2024-09-24 01:38:28 UTC">1 year ago</span> by <a href='../user/davidc'>DavidC</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="entity-meta-item">
+                                            <svg class="svg-icon" data-icon="edit" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z" />
+                                                <path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <div>
+                                                Updated <span title="2024-10-28 03:17:40 UTC">1 year ago</span> by <a href='../user/davidc'>DavidC</a>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="active-restriction">
+                                        <div class="entity-meta-item">
+                                            <svg class="svg-icon" data-icon="lock" role="presentation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                                                <defs>
+                                                    <path id="a" d="M0 0h24v24H0z" />
+                                                </defs>
+                                                <clipPath id="b">
+                                                    <use xlink:href="#a" overflow="visible" />
+                                                </clipPath>
+                                                <path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2M8.9 6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H8.9zM18 20H6V10h12z" clip-path="url(#b)" />
+                                            </svg>
+                                            <div>Book Permissions Active</div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="active-restriction">
+                                        <div class="entity-meta-item">
+                                            <svg class="svg-icon" data-icon="lock" role="presentation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                                                <defs>
+                                                    <path id="a" d="M0 0h24v24H0z" />
+                                                </defs>
+                                                <clipPath id="b">
+                                                    <use xlink:href="#a" overflow="visible" />
+                                                </clipPath>
+                                                <path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2M8.9 6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H8.9zM18 20H6V10h12z" clip-path="url(#b)" />
+                                            </svg>
+                                            <div>Page Permissions Active</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="actions" class="actions mb-xl">
+                                <h5>Actions</h5>
+
+                                <div class="icon-list text-link">
+
+
+
+                                    <hr class="primary-background" />
+
+                                    <form action="../favourites/add" method="POST">
+                                        <input type="hidden" name="_token" value="26PlAUAxuWpCLFpFTyIBuOV6iIxLQ7XGCgd3LNr5" autocomplete="off">
+                                        <input type="hidden" name="type" value="page">
+                                        <input type="hidden" name="id" value="117">
+                                        <button type="submit" data-shortcut="favourite" class="icon-list-item text-link">
+                                            <span><svg class="svg-icon" data-icon="star-outline" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28z" /></svg></span>
+                                            <span>Favourite</span>
+                                        </button>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </aside>
+                    </div>
+
+                    <div class="tri-layout-left print-hidden" id="sidebar">
+                        <aside refs="tri-layout@sidebar-scroll-container" class="tri-layout-left-contents">
+                            <nav id="page-navigation" class="mb-xl" aria-label="Page Navigation">
+                                <h5>Page Navigation</h5>
+                                <div class="body">
+                                    <ul class="sidebar-page-nav menu">
+                                        <li class="page-nav-item h2">
+                                            <a href="#bkmrk-gags%2C-mutes%2C-and-kic" class="text-limit-lines-1 block">Gags, mutes, and kicks</a>
+                                            <div class="link-background sidebar-page-nav-bullet"></div>
+                                        </li>
+                                        <li class="page-nav-item h2">
+                                            <a href="#bkmrk-moderator-banning-gu-1" class="text-limit-lines-1 block">Moderator Banning Guidelines</a>
+                                            <div class="link-background sidebar-page-nav-bullet"></div>
+                                        </li>
+                                        <li class="page-nav-item h1">
+                                            <a href="#bkmrk-how-to-use-battlemet" class="text-limit-lines-1 block">How to use Battlemetrics &quot;BM&quot;</a>
+                                            <div class="link-background sidebar-page-nav-bullet"></div>
+                                        </li>
+                                        <li class="page-nav-item h3">
+                                            <a href="#bkmrk-battlemetrics-is-or-" class="text-limit-lines-1 block">Battlemetrics is or will be your best friend. Other than commands issued in-game Battlemetrics is th</a>
+                                            <div class="link-background sidebar-page-nav-bullet"></div>
+                                        </li>
+                                        <li class="page-nav-item h3">
+                                            <a href="#bkmrk-in-battlemetrics-you" class="text-limit-lines-1 block">In Battlemetrics you can and will, issue bans, kick players, make notes, watch chat, and investigate</a>
+                                            <div class="link-background sidebar-page-nav-bullet"></div>
+                                        </li>
+                                        <li class="page-nav-item h3">
+                                            <a href="#bkmrk-welcome-to-battlemet" class="text-limit-lines-1 block">Welcome to Battlemetrics!, above you will see the general overall and landing page for Battlemetrics</a>
+                                            <div class="link-background sidebar-page-nav-bullet"></div>
+                                        </li>
+                                        <li class="page-nav-item h3">
+                                            <a href="#bkmrk-examples-below" class="text-limit-lines-1 block">Examples below</a>
+                                            <div class="link-background sidebar-page-nav-bullet"></div>
+                                        </li>
+                                        <li class="page-nav-item h1">
+                                            <a href="#bkmrk-issuing-a-ban" class="text-limit-lines-1 block">Issuing a ban</a>
+                                            <div class="link-background sidebar-page-nav-bullet"></div>
+                                        </li>
+                                        <li class="page-nav-item h2">
+                                            <a href="#bkmrk-congrats%21-you-have-s" class="text-limit-lines-1 block">Congrats! You have successfully banned a player!</a>
+                                            <div class="link-background sidebar-page-nav-bullet"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <nav id="book-tree" class="book-tree mb-xl" aria-label="Book Navigation">
+
+                                <h5>Book Navigation</h5>
+
+                                <ul class="sidebar-page-list mt-xs menu entity-list">
+                                    <li class="list-item-book book">
+                                        <a href="./general-info.html" class="book   entity-list-item" data-entity-type="book" data-entity-id="28">
+                                            <span role="presentation" class="icon text-book"><svg class="svg-icon" data-icon="book" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path fill="none" d="M0 0h24v24H0z" />
+                                                    <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2M6 4h5v8l-2.5-1.5L6 12z" /></svg></span>
+                                            <div class="content">
+                                                <h4 class="entity-list-item-name break-text">General Info</h4>
+
+                                            </div>
+                                        </a> </li>
+
+                                    <li class="list-item-page page ">
+                                        <a href="./guidelines.html" class="page   entity-list-item" data-entity-type="page" data-entity-id="116">
+                                            <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path fill="none" d="M0 0h24v24H0z" />
+                                                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z" /></svg></span>
+                                            <div class="content">
+                                                <h4 class="entity-list-item-name break-text">Guidelines</h4>
+
+                                            </div>
+                                        </a>
+
+                                    </li>
+                                    <li class="list-item-page page ">
+                                        <a href="./useful-commands.html" class="page   entity-list-item" data-entity-type="page" data-entity-id="118">
+                                            <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path fill="none" d="M0 0h24v24H0z" />
+                                                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z" /></svg></span>
+                                            <div class="content">
+                                                <h4 class="entity-list-item-name break-text">Useful Commands</h4>
+
+                                            </div>
+                                        </a>
+
+                                    </li>
+                                    <li class="list-item-page page ">
+                                        <a href="./moderation.html" class="page  selected entity-list-item" data-entity-type="page" data-entity-id="117">
+                                            <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path fill="none" d="M0 0h24v24H0z" />
+                                                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z" /></svg></span>
+                                            <div class="content">
+                                                <h4 class="entity-list-item-name break-text">Moderation</h4>
+
+                                            </div>
+                                        </a>
+
+                                    </li>
+                                </ul>
+                            </nav>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" tri-layout-middle">
+                <div id="main-content" class="tri-layout-middle-contents">
+
+                    <div class="mb-m print-hidden">
+                        <nav class="breadcrumbs text-center" aria-label="Breadcrumb">
+
+
+
+
+                            <a href="../shelves" class="text-bookshelf icon-list-item outline-hover">
+                                <span><svg class="svg-icon" data-icon="bookshelf" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path fill="none" d="M1.088 2.566h17.42v17.42H1.088z" />
+                                        <path d="M4 20.058h15.892V22H4z" />
+                                        <path fill="none" d="M2.902 1.477h17.42v17.42H2.903z" />
+                                        <path d="M6.658 3.643V18h-2.38V3.643zm4.668 0V18H8.947V3.643zm3.396.213 5.613 13.214-2.19.93-5.613-13.214z" /></svg></span>
+                                <span>Shelves</span>
+                            </a>
+
+
+
+                            <div components="dropdown dropdown-search" option:dropdown-search:url="/search/entity/siblings?entity_type=bookshelf&entity_id=8" option:dropdown-search:local-search-selector=".entity-list-item" class="dropdown-search">
+                                <button class="dropdown-search-toggle-breadcrumb" refs="dropdown@toggle" aria-haspopup="true" aria-expanded="false" title="Navigate siblings for shelf">
+                                    <div role="presentation" class="separator"><svg class="svg-icon" data-icon="chevron-right" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                                            <path d="M0 0h24v24H0z" fill="none" /></svg></div>
+                                </button>
+                                <div refs="dropdown@menu" class="dropdown-search-dropdown card">
+                                    <div class="dropdown-search-search">
+                                        <svg class="svg-icon" data-icon="search" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14" />
+                                            <path fill="none" d="M0 0h24v24H0z" /></svg> <input refs="dropdown-search@searchInput" aria-label="Search" autocomplete="off" placeholder="Search" type="text">
+                                    </div>
+                                    <div refs="dropdown-search@loading">
+                                        <div class="loading-container">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div refs="dropdown-search@listContainer" class="dropdown-search-list px-m" tabindex="-1" role="list"></div>
+                                </div>
+                            </div> <a href="../shelves/raid-sim" class="text-bookshelf icon-list-item outline-hover">
+                                <span><svg class="svg-icon" data-icon="bookshelf" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path fill="none" d="M1.088 2.566h17.42v17.42H1.088z" />
+                                        <path d="M4 20.058h15.892V22H4z" />
+                                        <path fill="none" d="M2.902 1.477h17.42v17.42H2.903z" />
+                                        <path d="M6.658 3.643V18h-2.38V3.643zm4.668 0V18H8.947V3.643zm3.396.213 5.613 13.214-2.19.93-5.613-13.214z" /></svg></span>
+                                <span>
+                                    Raid Sim
+                                </span>
+                            </a>
+
+
+                            <div components="dropdown dropdown-search" option:dropdown-search:url="/search/entity/siblings?entity_type=book&entity_id=28" option:dropdown-search:local-search-selector=".entity-list-item" class="dropdown-search">
+                                <button class="dropdown-search-toggle-breadcrumb" refs="dropdown@toggle" aria-haspopup="true" aria-expanded="false" title="Navigate siblings for book">
+                                    <div role="presentation" class="separator"><svg class="svg-icon" data-icon="chevron-right" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                                            <path d="M0 0h24v24H0z" fill="none" /></svg></div>
+                                </button>
+                                <div refs="dropdown@menu" class="dropdown-search-dropdown card">
+                                    <div class="dropdown-search-search">
+                                        <svg class="svg-icon" data-icon="search" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14" />
+                                            <path fill="none" d="M0 0h24v24H0z" /></svg> <input refs="dropdown-search@searchInput" aria-label="Search" autocomplete="off" placeholder="Search" type="text">
+                                    </div>
+                                    <div refs="dropdown-search@loading">
+                                        <div class="loading-container">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div refs="dropdown-search@listContainer" class="dropdown-search-list px-m" tabindex="-1" role="list"></div>
+                                </div>
+                            </div> <a href="../books/general-info" class="text-book icon-list-item outline-hover">
+                                <span><svg class="svg-icon" data-icon="book" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2M6 4h5v8l-2.5-1.5L6 12z" /></svg></span>
+                                <span>
+                                    General Info
+                                </span>
+                            </a>
+
+
+
+                            <div components="dropdown dropdown-search" option:dropdown-search:url="/search/entity/siblings?entity_type=page&entity_id=117" option:dropdown-search:local-search-selector=".entity-list-item" class="dropdown-search">
+                                <button class="dropdown-search-toggle-breadcrumb" refs="dropdown@toggle" aria-haspopup="true" aria-expanded="false" title="Navigate siblings for page">
+                                    <div role="presentation" class="separator"><svg class="svg-icon" data-icon="chevron-right" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                                            <path d="M0 0h24v24H0z" fill="none" /></svg></div>
+                                </button>
+                                <div refs="dropdown@menu" class="dropdown-search-dropdown card">
+                                    <div class="dropdown-search-search">
+                                        <svg class="svg-icon" data-icon="search" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14" />
+                                            <path fill="none" d="M0 0h24v24H0z" /></svg> <input refs="dropdown-search@searchInput" aria-label="Search" autocomplete="off" placeholder="Search" type="text">
+                                    </div>
+                                    <div refs="dropdown-search@loading">
+                                        <div class="loading-container">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div refs="dropdown-search@listContainer" class="dropdown-search-list px-m" tabindex="-1" role="list"></div>
+                                </div>
+                            </div> <a href="./moderation" class="text-page icon-list-item outline-hover">
+                                <span><svg class="svg-icon" data-icon="page" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z" /></svg></span>
+                                <span>
+                                    Moderation
+                                </span>
+                            </a>
+                        </nav>
+                    </div>
+
+                    <main class="content-wrap card">
+                        <div component="page-display" option:page-display:page-id="117" class="page-content clearfix">
+                            <div dir="auto">
+
+                                <h1 class="break-text" id="bkmrk-page-title">Moderation</h1>
+
+                                <div style="clear:left;"></div>
+
+                                <p id="bkmrk-being-a-moderator-on" dir="ltr">Being a moderator on Raid Simulator is a unique learning experience, designed to teach the basics of server administration. Most other servers start you off as a chat mod with almost no perms to get the job done. Your aim as a moderator is to get to a stage where all your ban requests are correct and you are confident at handling tickets. </p>
+                                <h4 id="bkmrk-gags%2C-mutes%2C-and-kic" dir="ltr"><strong><span style="color:rgb(132,63,161);">Gags, mutes, and kicks</span></strong></h4>
+                                <p id="bkmrk-gags-and-mutes-are-t" dir="ltr">Gags and Mutes are temporary and don't last from session to session. If a player requires a permanent mute, make a perm ban request. </p>
+                                <ul id="bkmrk-gags---can-be-used-f">
+                                    <li class="null"><strong>Gags - </strong>can be used for players who don’t listen to a warning and are either being overly toxic in voice or are playing ear-rapey music. A couple of other situations may arise although regarding gag lengths, it’s up to you. </li>
+                                    <li class="null"><strong>Mutes - </strong>can be used for spam, advertisement or toxicity. If you see something racist or homophobic and you are a mod, mute them then make a ban request. Mute lengths are up to you however I would keep them relatively short and treat them as more of a pulling the players in line sort of thing. Mutes over a couple hours are unnecessary as players won’t usually play for that long.</li>
+                                    <li class="null"><strong>Kicks - </strong>are only used as a warning to stop blocking parkour or if a player is committing a bannable offence (This is only allowed via the BATTLEMETRICS kick function) and you need to make them stop while either banning or making a ban request. Make sure you add, “don’t block parkour” if you kick for that reason.</li>
+                                </ul>
+                                <p id="bkmrk-%C2%A0" class="callout warning">As of 09/01/2024 Moderators can now ban for 1 DAY. This has been implemented to allow Moderators to handle racism bans and give Admins a little bit of time to update/go through the ban requests in discord.<br><br>In order for Moderators to be able to ban they MUST be trained on it. <strong>See Below</strong></p>
+                                <p id="bkmrk-%C2%A0-1"></p>
+                                <table id="bkmrk-moderator-banning-gu" style="border-collapse:collapse;width:100%;border-width:1px;height:1127.45px;">
+                                    <caption>
+                                        <h4 id="bkmrk-moderator-banning-gu-1"><strong>Moderator Banning Guidelines</strong></h4>
+                                        <ul>
+                                            <li class="null" style="text-align:justify;">Moderators currently have access to ban for 1 Day, this is due to you being in a training period. You are learning the rules and learning how to staff on Raid Simulator.</li>
+                                            <li class="null" style="text-align:justify;">Below are the general rules that, if broken, you can ban players for breaking said rules.</li>
+                                        </ul>
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width:24.9629%;">
+                                        <col style="width:51.4088%;">
+                                        <col style="width:8.1562%;">
+                                        <col style="width:15.4474%;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr style="height:80px;">
+                                            <td style="height:80px;">Griefing</td>
+                                            <td style="height:80px;">This is when a player intentionally throws or performs an action that benefits the other team. This is a general rule that can be violated in many different ways. Most (80%) of our bans are for griefing. </td>
+                                            <td style="height:80px;"> 1 week<br></td>
+                                            <td style="height:80px;">Escalate to Admin+</td>
+                                        </tr>
+                                        <tr style="height:214.4px;">
+                                            <td style="height:214.4px;">Racism</td>
+                                            <td style="height:214.4px;">ANY use of the N-word in ANY manner is against the rules. This goes for INTENTIONAL use, as in players who type the first 3 letters in their message and then type the other 3 words in a message sent 30 seconds later. Or players who abbreviate the word.<br><em><strong>Why:</strong> We don't allow ANYONE to say it no matter the "color of their skin". Players try to appeal all the time and say the same thing "i'm literally black I can say it", we don't allow anyone to use it because we are NOT going to check/regulate who can/can't say it. If we make exceptions then everyone will think it's okay. So to keep it fair, no one no matter what is allowed to say / use the word. </em></td>
+                                            <td style="height:214.4px;">1 day</td>
+                                            <td style="height:214.4px;">You can handle this ban</td>
+                                        </tr>
+                                        <tr style="height:130.4px;">
+                                            <td style="height:130.4px;">Walling off the base</td>
+                                            <td style="height:130.4px;">This ban is for when a player intentionally walls off the inside or the outside of their base as a way to grief / block their teammates from getting around / in / out of their base.<br><br>If it's clear the player walled off the inside/outside of the base to protect their base from getting raided (they patched/sealed up the base from the raiders) that's okay</td>
+                                            <td style="height:130.4px;">
+                                                <p>WARN FIRST</p>
+                                                <p><em>then</em></p>
+                                                <p>1 week ban</p>
+                                            </td>
+                                            <td style="height:130.4px;">Escalate to Admin+</td>
+                                        </tr>
+                                        <tr style="height:221.05px;">
+                                            <td style="height:221.05px;">Excessive Loot</td>
+                                            <td style="height:221.05px;">
+                                                <ul>
+                                                    <li class="null">A player taking too much loot out of their base.</li>
+                                                    <li class="null">The loot must be OUTSIDE the base.</li>
+                                                    <li class="null">Players sitting on their roof with an inv full of rockets and a rocket launcher does NOT count as excessive</li>
+                                                    <li class="null">Players with an inv full of meds but they have 1 gun and 1 stack of ammo does NOT count as excessive loot</li>
+                                                    <li class="null">Players with an INV full of AKs DOES count as excessive loot</li>
+                                                    <li class="null">Players with an INV full of C4 DOES count as excessive loot</li>
+                                                </ul>
+                                            </td>
+                                            <td style="height:221.05px;">1 week ban</td>
+                                            <td style="height:221.05px;">Escalate to Admin+</td>
+                                        </tr>
+                                        <tr style="height:46.4px;">
+                                            <td style="height:46.4px;">Mic Spam</td>
+                                            <td style="height:46.4px;">Players playing music at a normal volume is allowed. If it's VERY loud, ban</td>
+                                            <td style="height:46.4px;"> 1 Day</td>
+                                            <td style="height:46.4px;">You can handle this ban</td>
+                                        </tr>
+                                        <tr style="height:102.4px;">
+                                            <td style="height:102.4px;">Staff Disrespect</td>
+                                            <td style="height:102.4px;">This is for people that just don't stop after a few warnings. If it gets too deep/personal, then ban</td>
+                                            <td style="height:102.4px;">
+                                                <p>Mute</p>
+                                                <p>Gag</p>
+                                                <p><strong><em>then</em></strong></p>
+                                                <p>1 Day</p>
+                                            </td>
+                                            <td style="height:102.4px;">You can handle this ban</td>
+                                        </tr>
+                                        <tr style="height:63.2px;">
+                                            <td style="height:63.2px;">False Admin Abuse Claims</td>
+                                            <td style="height:63.2px;">Players that say/claim admin abuse when there's no real abuse going on, aka players who say it when they're mad at a staff member</td>
+                                            <td style="height:63.2px;">1 Day</td>
+                                            <td style="height:63.2px;">You can handle this ban</td>
+                                        </tr>
+                                        <tr style="height:80px;">
+                                            <td style="height:80px;">Impersonating staff or players</td>
+                                            <td style="height:80px;">This ban is for anyone who has the same name that acts as the person.<br>Names are names and shouldn't be changed just because, but when they start acting like staff or someone, then ban.</td>
+                                            <td style="height:80px;">1 Week</td>
+                                            <td style="height:80px;">Escalate to Admin+</td>
+                                        </tr>
+                                        <tr style="height:46.4px;">
+                                            <td style="height:46.4px;">Offensive Name</td>
+                                            <td style="height:46.4px;">This includes racist and toxic names in general</td>
+                                            <td style="height:46.4px;">PERM</td>
+                                            <td style="height:46.4px;">Escalte to HeadAdmin+</td>
+                                        </tr>
+                                        <tr style="height:80px;">
+                                            <td style="height:80px;">Advertising</td>
+                                            <td style="height:80px;">This is ANY rust servers or any other gaming services/websites. Social discords are fine if they're referring friends but nothing that promotes other gaming services<br>Example: "JOIN THIS DISCORD FOR FREE CHEATS"</td>
+                                            <td style="height:80px;">PERM</td>
+                                            <td style="height:80px;">Escalate to HeadAdmin+</td>
+                                        </tr>
+                                        <tr style="height:63.2px;">
+                                            <td style="height:63.2px;">Doxxing/Attempt to Crash Server</td>
+                                            <td style="height:63.2px;">This is for players who throw out TONS of loot on the ground and it physically lags out/crashes the server.<br><strong><em>or<br></em></strong>Players who dox another player / dox the server or threaten to dox another player / the server</td>
+                                            <td style="height:63.2px;">PERM</td>
+                                            <td style="height:63.2px;">Escalate to HeadAdmin+</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h4 class="align-center" id="bkmrk-%C2%A0-2"> </h4>
+                                <h3 class="align-center" id="bkmrk-how-to-use-battlemet"><strong>How to use Battlemetrics "BM"</strong></h3>
+                                <h5 class="align-center" id="bkmrk-battlemetrics-is-or-">Battlemetrics is or will be your best friend. Other than commands issued in-game Battlemetrics is the MAIN system rust servers use to track players, issue bans, and watch over players in-game.</h5>
+                                <h5 class="align-center" id="bkmrk-in-battlemetrics-you">In Battlemetrics you can and will, issue bans, kick players, make notes, watch chat, and investigate / track players</h5>
+                                <p class="align-center" id="bkmrk-"><img src="https://i.gyazo.com/5e8532adf6de4baaccc02f0833b4d63b.png" alt="Dashboard" width="810" height="277"><br></p>
+                                <h5 class="align-center" id="bkmrk-welcome-to-battlemet">Welcome to Battlemetrics!, above you will see the general overall and landing page for Battlemetrics</h5>
+                                <ul id="bkmrk-on-the-left-and-righ">
+                                    <li class="null">On the left and right side, you will see our two servers, NA and EU Raid Simulator</li>
+                                    <li class="null">Each server shows a list of players' names, next to their names is a small drop-down arrow</li>
+                                    <li class="null">Within the dropdown menu <strong>See below, </strong>you can kick, mute, and ban a player (You will mostly be using kick/mute from this menu)</li>
+                                </ul>
+                                <p class="align-center" id="bkmrk-%C2%A0-3"><img src="https://i.gyazo.com/fc94f8052a92ced7c27abe059e2cabd8.png" alt="fc94f8052a92ced7c27abe059e2cabd8.png"> </p>
+                                <ul id="bkmrk-you-can-also-click-o">
+                                    <li class="null">You can also click on the player's name in blue, and thus will appear their "Battlemetrics Profile"</li>
+                                    <li class="null">This is one of the most used terms for staff members</li>
+                                    <li class="null">Within a player's Battlemetrics profile you will see their current/past bans, their join/leave log, their chat log, their kill log, and any alts that have been associated with their IP address</li>
+                                    <li class="null">The link to a player's battlemetrics profile is the web address when you are on this webpage, sending other staff members the link will allow us to see the battlemetrics profile you are looking at aswell</li>
+                                </ul>
+                                <h5 class="align-center" id="bkmrk-examples-below">Examples below<br><br><img src="https://i.gyazo.com/323fd35768416d0f1e7121a0c134edfa.png" alt="323fd35768416d0f1e7121a0c134edfa.png"><br></h5>
+                                <p class="align-center" id="bkmrk--1"><img src="https://i.gyazo.com/727b8be7574af87daf58a51f986fc51c.png" alt="727b8be7574af87daf58a51f986fc51c.png"></p>
+                                <ul id="bkmrk-there-are-a-couple-o">
+                                    <li class="null">There are a couple of special flags/warnings you can notice on a players account, one is: <img src="https://i.gyazo.com/fb52f0101f76b31b21cc54bb2d82ba44.png" alt="fb52f0101f76b31b21cc54bb2d82ba44.png"><br>This means a player has an alt account that has been detected under their IP address. You can click the dropdown arrow next to this flag to view the associated account. If a player has 20 accounts, it's most likely a VPN, and those accounts aren't theirs. Or... it will tell you <img src="https://i.gyazo.com/3e10e61e856fa5f003416051c9d5f8e0.png" alt="3e10e61e856fa5f003416051c9d5f8e0.png"><br>If you click the dropdown and the player only has 2-4 accounts under it, it could very much be real. Clicking another blue name will show you the other account under their IP address. At that point, you can check the history of that alt account and any bans/punishments/game bans on that account.
+                                        <p class="callout warning">If you find an alt account that has a game ban under 150 days you MUST escalate to Management to review the alt account. IP addresses are scrambled and you are not allowed to see them, management are the only ones who can confirm the IP address is NOT a VPN. </p>
+                                    </li>
+                                    <li class="null">The other flag you will see is:<br><img src="https://i.gyazo.com/57f9081777101bcb593ebb8f16687291.png" alt="57f9081777101bcb593ebb8f16687291.png"><br>This means a player has a game ban on their account... THIS FLAG IS WRONG. A couple of years ago rust closed their public database that used to verify/show a player has a Rust game ban, since then this flag has broken and sometimes says a player's alt account is game banned but they aren't anymore. It also cannot verify their game ban is from rust. The only way for us to know is for you to manually go to their steam account profile page, and see if the game ban was under 150 days old. If it is, issue a ban and FWD to Admin+ to double-check your work<br><br><br>
+                                        <h3 class="align-center" id="bkmrk-issuing-a-ban"><strong>Issuing a ban</strong></h3>
+                                    </li>
+                                </ul>
+                                <ol id="bkmrk-on-the-players-battl">
+                                    <li class="null">On the players battlemetrics profile, click the big red "Ban Player" button in the top right<br> <img src="https://i.gyazo.com/4ce33f8e387d4d9f7c651fd2784476c0.png" alt="4ce33f8e387d4d9f7c651fd2784476c0.png"></li>
+                                    <li class="null">Next, you'll see a list of our servers "NA or EU", select the appropriate one <br> <img src="https://i.gyazo.com/7e9d4a44f8208bf0fb43dfb7a13c361a.png" alt="7e9d4a44f8208bf0fb43dfb7a13c361a.png"> </li>
+                                    <li class="null">Then, select your "Preset Time", You will only have access to 1 day so select that. <br> <img src="https://i.gyazo.com/f6e868ce30efd8a3bcd482ed006d45ed.png" alt="f6e868ce30efd8a3bcd482ed006d45ed.png"></li>
+                                    <li class="null">You will now have a dropdown list of preset reasons for why a player was banned. Select the appropriate one <img src="https://i.gyazo.com/a4aa0f8e7dff4d0226aacdfd1f3af36d.png" width="400" alt="a4aa0f8e7dff4d0226aacdfd1f3af36d.png"></li>
+                                    <li class="null">Fill in your notes and input your required evidence<br><img src="https://i.gyazo.com/d0616818ee531df4f63080e820e78de9.png" width="400" alt="d0616818ee531df4f63080e820e78de9.png"></li>
+                                    <li class="null">Finally, click save ban at the bottom<br><img src="https://i.gyazo.com/5d45abff946613d3cbce0d4e4ab21b39.png" alt="5d45abff946613d3cbce0d4e4ab21b39.png"></li>
+                                </ol>
+                                <h4 class="align-center" id="bkmrk-congrats%21-you-have-s"><strong>Congrats! You have successfully banned a player! </strong></h4>
+                                <p class="callout danger" id="bkmrk-do-not-edit-anything"><strong>DO NOT EDIT ANYTHING OUTSIDE OF WHAT WE HAVE GONE OVER TODAY</strong></p>
+                                <p class="callout danger" id="bkmrk-do-not-touch-%22identi"><strong>DO NOT TOUCH "IDENTIFIERS" OR <img src="https://i.gyazo.com/648cbc97b376ae344492f33bac0581ff.png" alt="648cbc97b376ae344492f33bac0581ff.png"></strong></p>
+                            </div>
+                        </div>
+                        <div component="pointer" option:pointer:page-id="117">
+                            <div id="pointer" refs="pointer@pointer" tabindex="-1" aria-label="Page Section Options" class="pointer-container">
+                                <div class="pointer flex-container-row items-center justify-space-between gap-xs p-xs anim">
+                                    <div refs="pointer@mode-section" class="flex flex-container-row items-center gap-xs">
+                                        <button refs="pointer@mode-toggle" title="Permalink mode, Press to show include tag" class="text-button icon px-xs"><svg class="svg-icon" data-icon="link" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5" /></svg></button>
+                                        <div class="input-group flex flex-container-row items-center">
+                                            <input refs="pointer@link-input" aria-label="Page Section Permalink" readonly="readonly" type="text" id="pointer-url" placeholder="url">
+                                            <button refs="pointer@link-button" class="button outline icon px-xs" type="button" title="Copy Link"><svg class="svg-icon" data-icon="copy" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m0 16H8V7h11z" /></svg></button>
+                                        </div>
+                                    </div>
+                                    <div refs="pointer@mode-section" hidden class="flex flex-container-row items-center gap-xs">
+                                        <button refs="pointer@mode-toggle" title="Include tag mode, Press to show permalink" class="text-button icon px-xs"><svg class="svg-icon" data-icon="include" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <path fill="none" d="M0 .5h24v24H0z" />
+                                                <path d="m12 16.5 4-4h-3v-9h-2v9H8zm9-13h-6v1.99h6v14.03H3V5.49h6V3.5H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2" /></svg></button>
+                                        <div class="input-group flex flex-container-row items-center">
+                                            <input refs="pointer@include-input" aria-label="Page Section Include Tag" readonly="readonly" type="text" id="pointer-include" placeholder="include">
+                                            <button refs="pointer@include-button" class="button outline icon px-xs" type="button" title="Copy Link"><svg class="svg-icon" data-icon="copy" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m0 16H8V7h11z" /></svg></button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button refs="pointer@section-mode-button" class="screen-reader-only">Enter section select mode</button>
+                        </div>
+                    </main>
+
+                    <div id="sibling-navigation" class="grid half collapse-xs items-center mb-m px-m no-row-gap fade-in-when-active print-hidden">
+                        <div>
+                            <a href="./useful-commands" data-shortcut="previous" class="outline-hover no-link-style block rounded">
+                                <div class="px-m pt-xs text-muted">Previous</div>
+                                <div class="inline-block">
+                                    <div class="icon-list-item no-hover">
+                                        <span class="text-page "><svg class="svg-icon" data-icon="page" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <path fill="none" d="M0 0h24v24H0z" />
+                                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z" /></svg></span>
+                                        <span>Useful Commands</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div component="back-to-top" class="back-to-top print-hidden">
+        <div class="inner">
+            <svg class="svg-icon" data-icon="chevron-up" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+                <path fill="none" d="M0 0h24v24H0z" /></svg> <span>Back to top</span>
+        </div>
+    </div>
+
+    <script src="../dist/app.js?version=v26.05.1" type="module" nonce="9GS3S3EB5F0TcevY5t3ESpjF"></script>
+
+</body>
+
+</html>

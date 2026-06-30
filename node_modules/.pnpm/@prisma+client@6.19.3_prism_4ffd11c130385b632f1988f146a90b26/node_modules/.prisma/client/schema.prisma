@@ -1,0 +1,44 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Page {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  slug           String   @unique
+  title          String
+  description    String?
+  content        Json
+  sortOrder      Int      @default(0)
+  allowedRoleIds String[] @default([])
+  allowedUserIds String[] @default([])
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  updatedBy      String?
+
+  @@map("pages")
+}
+
+model AuditLog {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  pageSlug  String
+  userId    String
+  action    String
+  createdAt DateTime @default(now())
+
+  @@index([pageSlug])
+  @@map("audit_logs")
+}
+
+model SiteConfig {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  discordGuildId String?
+  updatedAt      DateTime @updatedAt
+  updatedBy      String?
+
+  @@map("site_config")
+}

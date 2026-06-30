@@ -1,0 +1,47 @@
+{
+	"name": "jipyraidsimsite",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"db:push": "prisma db push",
+		"db:seed": "prisma db seed",
+		"db:generate": "prisma generate"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-node": "^5.5.4",
+		"@sveltejs/kit": "^2.63.0",
+		"@sveltejs/vite-plugin-svelte": "^7.1.2",
+		"@tailwindcss/vite": "^4.3.0",
+		"svelte": "^5.56.1",
+		"svelte-check": "^4.6.0",
+		"tailwindcss": "^4.3.0",
+		"tsx": "^4.22.4",
+		"typescript": "^6.0.3",
+		"vite": "^8.0.16"
+	},
+	"dependencies": {
+		"@auth/core": "^0.41.2",
+		"@auth/sveltekit": "^1.11.2",
+		"@lucide/svelte": "^1.21.0",
+		"@prisma/client": "^6.19.3",
+		"@tiptap/core": "^3.27.1",
+		"@tiptap/extension-table": "^3.27.1",
+		"@tiptap/extension-table-cell": "^3.27.1",
+		"@tiptap/extension-table-header": "^3.27.1",
+		"@tiptap/extension-table-row": "^3.27.1",
+		"@tiptap/starter-kit": "^3.27.1",
+		"cheerio": "^1.2.0",
+		"lucide-svelte": "^1.0.1",
+		"prisma": "^6.19.3"
+	},
+	"prisma": {
+		"seed": "tsx prisma/seed.ts"
+	}
+}

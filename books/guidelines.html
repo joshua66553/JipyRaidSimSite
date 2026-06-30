@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr" class="dark-mode ">
+
+<head>
+    <title>Guidelines | Syndicated Knowledge Base</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="token" content="26PlAUAxuWpCLFpFTyIBuOV6iIxLQ7XGCgd3LNr5">
+    <meta name="base-url" content="..">
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Social Cards Meta -->
+    <meta property="og:title" content="Guidelines | Syndicated Knowledge Base">
+    <meta property="og:url" content="./guidelines.html">
+    <meta property="og:description" content="Spawning in items
+Admins and above are allowed to use the items menu to spawn in items within the l...">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../dist/styles.css?version=v26.05.1">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="256x256" href="../uploads/images/system/2024-01/IPLdiscord-jcg0teubv2.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="../uploads/images/system/2024-01/GPydiscord-jcg0teubv2.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../uploads/images/system/2024-01/GPydiscord-jcg0teubv2.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="../uploads/images/system/2024-01/Mlodiscord-jcg0teubv2.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="../uploads/images/system/2024-01/SRcdiscord-jcg0teubv2.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../uploads/images/system/2024-01/Fb4discord-jcg0teubv2.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="../manifest.json" crossorigin="use-credentials">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- OpenSearch -->
+    <link rel="search" type="application/opensearchdescription+xml" title="Syndicated Knowledge Base" href="../opensearch.xml">
+
+    <!-- Custom Styles & Head Content -->
+    <style>
+        :root {
+            --color-primary: #206ea7;
+            --color-primary-light: rgba(32, 110, 167, 0.15);
+            --color-link: #206ea7;
+            --color-bookshelf: #a94747;
+            --color-book: #077b70;
+            --color-chapter: #af4d0d;
+            --color-page: #206ea7;
+            --color-page-draft: #7e50b1;
+        }
+
+        :root.dark-mode {
+            --color-primary: #000000;
+            --color-primary-light: rgba(0, 0, 0, 0.15);
+            --color-link: #429fe3;
+            --color-bookshelf: #ff5454;
+            --color-book: #389f60;
+            --color-chapter: #ee7a2d;
+            --color-page: #429fe3;
+            --color-page-draft: #a66ce8;
+        }
+    </style>
+    <!-- Start: custom user content -->
+
+
+    <!-- End: custom user content -->
+
+
+    <!-- Translations for JS -->
+</head>
+
+<body class=" tri-layout ">
+
+    <a class="px-m py-s skip-to-content-link print-hidden" href="#main-content">Skip to main content</a>
+    <div component="notification" option:notification:type="success" option:notification:auto-hide="true" option:notification:show="false" style="display: none;" class="notification pos" role="alert">
+        <svg class="svg-icon" data-icon="check-circle" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path fill="none" d="M0 0h24v24H0z" />
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z" /></svg> <span></span>
+        <div class="dismiss"><svg class="svg-icon" data-icon="close" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" /></svg></div>
+    </div>
+
+    <div component="notification" option:notification:type="warning" option:notification:auto-hide="false" option:notification:show="false" style="display: none;" class="notification warning" role="alert">
+        <svg class="svg-icon" data-icon="info" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path fill="none" d="M0 0h24v24H0z" />
+            <path d="M11 17h2v-6h-2zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8M11 9h2V7h-2z" /></svg> <span></span>
+        <div class="dismiss"><svg class="svg-icon" data-icon="close" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" /></svg></div>
+    </div>
+
+    <div component="notification" option:notification:type="error" option:notification:auto-hide="false" option:notification:show="false" style="display: none;" class="notification neg" role="alert">
+        <svg class="svg-icon" data-icon="danger" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27zM12 17.3c-.72 0-1.3-.58-1.3-1.3s.58-1.3 1.3-1.3 1.3.58 1.3 1.3-.58 1.3-1.3 1.3m1-4.3h-2V7h2z" />
+            <path fill="none" d="M0 0h24v24H0z" /></svg> <span></span>
+        <div class="dismiss"><svg class="svg-icon" data-icon="close" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" /></svg></div>
+    </div>
+    <header id="header" component="header-mobile-toggle" class="primary-background px-xl grid print-hidden">
+        <div class="flex-container-row justify-space-between gap-s items-center">
+            <a href=".." data-shortcut="home_view" class="logo">
+                <img class="logo-image" src="../uploads/images/system/2024-01/discord-jcg0teubv2.png" alt="Logo">
+                <span class="logo-text">Syndicated Knowledge Base</span>
+            </a>
+            <div class="hide-over-l py-s">
+                <button type="button" refs="header-mobile-toggle@toggle" title="Expand Header Menu" aria-expanded="false" class="mobile-menu-toggle"><svg class="svg-icon" data-icon="more" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2" /></svg></button>
+            </div>
+        </div>
+
+        <div class="flex-container-column items-center justify-center hide-under-l">
+            <form component="global-search" action="../search" method="GET" class="search-box" role="search" tabindex="0">
+                <button id="header-search-box-button" refs="global-search@button" type="submit" aria-label="Search" tabindex="-1"><svg class="svg-icon" data-icon="search" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14" />
+                        <path fill="none" d="M0 0h24v24H0z" /></svg></button>
+                <input id="header-search-box-input" refs="global-search@input" type="text" name="term" data-shortcut="global_search" autocomplete="off" aria-label="Search" placeholder="Search" value="">
+                <div refs="global-search@suggestions" class="global-search-suggestions card">
+                    <div refs="global-search@loading" class="text-center px-m global-search-loading">
+                        <div class="loading-container">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div refs="global-search@suggestion-results" class="px-m"></div>
+                    <button class="text-button card-footer-link" type="submit">View All</button>
+                </div>
+            </form>
+        </div>
+
+        <nav refs="header-mobile-toggle@menu" class="header-links">
+            <div class="links text-center">
+                <a class="hide-over-l" href="../search"><svg class="svg-icon" data-icon="search" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14" />
+                        <path fill="none" d="M0 0h24v24H0z" /></svg>Search</a>
+                <a href="../shelves" data-shortcut="shelves_view"><svg class="svg-icon" data-icon="bookshelf" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path fill="none" d="M1.088 2.566h17.42v17.42H1.088z" />
+                        <path d="M4 20.058h15.892V22H4z" />
+                        <path fill="none" d="M2.902 1.477h17.42v17.42H2.903z" />
+                        <path d="M6.658 3.643V18h-2.38V3.643zm4.668 0V18H8.947V3.643zm3.396.213 5.613 13.214-2.19.93-5.613-13.214z" /></svg>Shelves</a>
+                <a href="../books" data-shortcut="books_view"><svg class="svg-icon" data-icon="books" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path d="M19.252 1.708H8.663a1.77 1.77 0 0 0-1.765 1.764v14.12c0 .97.794 1.764 1.765 1.764h10.59a1.77 1.77 0 0 0 1.764-1.765V3.472a1.77 1.77 0 0 0-1.765-1.764M8.663 3.472h4.412v7.06L10.87 9.208l-2.206 1.324z" />
+                        <path fill="none" d="M30.61 3.203h24v24h-24z" />
+                        <path d="M2.966 6.61v14c0 1.1.9 2 2 2h14v-2h-14v-14z" /></svg>Books</a>
+
+            </div>
+            <div class="dropdown-container" component="dropdown" option:dropdown:bubble-escapes="true">
+                <button class="user-name py-s hide-under-l" refs="dropdown@toggle" aria-haspopup="menu" aria-expanded="false" aria-label="Profile Menu">
+                    <img class="avatar" src="../uploads/images/user/2024-10/thumbs-30-30/M3IJgMHg9pD7Xc1L-mdtq8avfvs-avatar.png" alt="RSMODS">
+                    <span class="name">RSMODS</span> <svg class="svg-icon" data-icon="caret-down" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="m7 10 5 5 5-5z" />
+                        <path fill="none" d="M0 0h24v24H0z" /></svg> </button>
+                <ul refs="dropdown@menu" class="dropdown-menu" role="menu" aria-label="Profile Menu">
+                    <li>
+                        <a href="../favourites" role="menuitem" data-shortcut="favourites_view" class="icon-item">
+                            <svg class="svg-icon" data-icon="star" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                <path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <div>My Favourites</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../user/rsmods" role="menuitem" data-shortcut="profile_view" class="icon-item">
+                            <svg class="svg-icon" data-icon="user" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4" />
+                                <path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <div>View Profile</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../my-account" role="menuitem" class="icon-item">
+                            <svg class="svg-icon" data-icon="user-preferences" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <circle cx="10" cy="8" r="4" />
+                                <path d="M10.67 13.02c-.22-.01-.44-.02-.67-.02-2.42 0-4.68.67-6.61 1.82-.88.52-1.39 1.5-1.39 2.53V20h9.26a6.96 6.96 0 0 1-.59-6.98M20.75 16c0-.22-.03-.42-.06-.63l1.14-1.01-1-1.73-1.45.49q-.48-.405-1.08-.63L18 11h-2l-.3 1.49q-.6.225-1.08.63l-1.45-.49-1 1.73 1.14 1.01c-.03.21-.06.41-.06.63s.03.42.06.63l-1.14 1.01 1 1.73 1.45-.49q.48.405 1.08.63L16 21h2l.3-1.49q.6-.225 1.08-.63l1.45.49 1-1.73-1.14-1.01c.03-.21.06-.41.06-.63M17 18c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2" /></svg>
+                            <div>My Account</div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <hr>
+                    </li>
+                    <li>
+                        <form action="../preferences/toggle-dark-mode" method="post">
+                            <input type="hidden" name="_token" value="26PlAUAxuWpCLFpFTyIBuOV6iIxLQ7XGCgd3LNr5" autocomplete="off">
+                            <input type="hidden" name="_method" value="patch">
+                            <input type="hidden" name="_return" value="../books/general-info/page/guidelines">
+                            <button class="icon-item" role=""><span><svg class="svg-icon" data-icon="light-mode" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M20 15.31 23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6" /></svg></span><span>Light Mode</span></button>
+                        </form>
+                    </li>
+                    <li role="presentation">
+                        <hr>
+                    </li>
+                    <li>
+                        <form action="../logout" method="post">
+                            <input type="hidden" name="_token" value="26PlAUAxuWpCLFpFTyIBuOV6iIxLQ7XGCgd3LNr5" autocomplete="off">
+                            <button class="icon-item" role="menuitem" data-shortcut="logout">
+                                <svg class="svg-icon" data-icon="logout" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path fill="none" d="M0 0h24v24H0z" />
+                                    <path d="m14.29 8.207 1.41-1.41 5 5-5 5-1.41-1.41 2.58-2.59H7.2v-2h9.67zM5 3h14a2 2 0 0 1 2 2v4h-2V5H5v14h14v-4h2v4a2 2 0 0 1-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2" /></svg>
+                                <div>Logout</div>
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="content" components="tri-layout" class="block">
+
+        <div class="tri-layout-mobile-tabs print-hidden">
+            <div class="grid half no-break no-gap">
+                <button type="button" refs="tri-layout@tab" data-tab="info" aria-label="Tab: Show Secondary Information" class="tri-layout-mobile-tab px-m py-m text-link">
+                    Info
+                </button>
+                <button type="button" refs="tri-layout@tab" data-tab="content" aria-label="Tab: Show Primary Content" aria-selected="true" class="tri-layout-mobile-tab px-m py-m text-link active">
+                    Content
+                </button>
+            </div>
+        </div>
+
+        <div refs="tri-layout@container" class="tri-layout-container">
+
+            <div class="tri-layout-sides print-hidden">
+                <div refs="tri-layout@sidebar-scroll-container" class="tri-layout-sides-content">
+                    <div class="tri-layout-right print-hidden">
+                        <aside refs="tri-layout@sidebar-scroll-container" class="tri-layout-right-contents">
+                            <div id="page-details" class="entity-details mb-xl">
+                                <h5>Details</h5>
+                                <div class="blended-links">
+                                    <div class="entity-meta">
+
+
+
+                                        <div class="entity-meta-item">
+                                            <svg class="svg-icon" data-icon="star" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <path fill="none" d="M0 0h24v24H0z" />
+                                                <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                <path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <div>
+                                                Created <span title="2024-09-24 01:31:57 UTC">1 year ago</span> by <a href='../user/davidc'>DavidC</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="entity-meta-item">
+                                            <svg class="svg-icon" data-icon="edit" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z" />
+                                                <path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <div>
+                                                Updated <span title="2024-09-24 01:51:51 UTC">1 year ago</span> by <a href='../user/davidc'>DavidC</a>
+                                            </div>
+                                        </div>
+
+                                        <a href="../books/general-info/page/guidelines/references" class="entity-meta-item">
+                                            <svg class="svg-icon" data-icon="reference" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                                                <path d="M24 44.15q-.6 0-1.175-.2a2.5 2.5 0 0 1-.975-.6l-17.2-17.2q-.4-.4-.6-.975c-.2-.575-.2-.775-.2-1.175s.067-.792.2-1.175q.2-.574.6-.975l17.2-17.2q.4-.4.975-.6c.575-.2.775-.2 1.175-.2s.792.067 1.175.2q.575.2.975.6l17.2 17.2q.4.4.6.975c.2.575.2.775.2 1.175s-.067.792-.2 1.175a2.5 2.5 0 0 1-.6.975l-17.2 17.2q-.4.4-.975.6c-.575.2-.775.2-1.175.2m4.05-18.65-5.15 5.15q-.45.45-.425 1.05t.475 1.05c.45.45.658.45 1.075.45s.775-.15 1.075-.45l7.7-7.7q.45-.45.45-1.05c0-.6-.15-.75-.45-1.05l-7.75-7.75q-.45-.45-1.05-.45c-.6 0-.75.15-1.05.45s-.45.658-.45 1.075.15.775.45 1.075l5.1 5.15h-12.4q-.65 0-1.075.425c-.425.425-.425.642-.425 1.075s.142.792.425 1.075.642.425 1.075.425z" /></svg>
+                                            <div>
+                                                Referenced by 1 item
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                    <div class="active-restriction">
+                                        <div class="entity-meta-item">
+                                            <svg class="svg-icon" data-icon="lock" role="presentation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                                                <defs>
+                                                    <path id="a" d="M0 0h24v24H0z" />
+                                                </defs>
+                                                <clipPath id="b">
+                                                    <use xlink:href="#a" overflow="visible" />
+                                                </clipPath>
+                                                <path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2M8.9 6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H8.9zM18 20H6V10h12z" clip-path="url(#b)" />
+                                            </svg>
+                                            <div>Book Permissions Active</div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="active-restriction">
+                                        <div class="entity-meta-item">
+                                            <svg class="svg-icon" data-icon="lock" role="presentation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                                                <defs>
+                                                    <path id="a" d="M0 0h24v24H0z" />
+                                                </defs>
+                                                <clipPath id="b">
+                                                    <use xlink:href="#a" overflow="visible" />
+                                                </clipPath>
+                                                <path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2M8.9 6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H8.9zM18 20H6V10h12z" clip-path="url(#b)" />
+                                            </svg>
+                                            <div>Page Permissions Active</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="actions" class="actions mb-xl">
+                                <h5>Actions</h5>
+
+                                <div class="icon-list text-link">
+
+
+
+                                    <hr class="primary-background" />
+
+                                    <form action="../favourites/add" method="POST">
+                                        <input type="hidden" name="_token" value="26PlAUAxuWpCLFpFTyIBuOV6iIxLQ7XGCgd3LNr5" autocomplete="off">
+                                        <input type="hidden" name="type" value="page">
+                                        <input type="hidden" name="id" value="116">
+                                        <button type="submit" data-shortcut="favourite" class="icon-list-item text-link">
+                                            <span><svg class="svg-icon" data-icon="star-outline" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28z" /></svg></span>
+                                            <span>Favourite</span>
+                                        </button>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </aside>
+                    </div>
+
+                    <div class="tri-layout-left print-hidden" id="sidebar">
+                        <aside refs="tri-layout@sidebar-scroll-container" class="tri-layout-left-contents">
+                            <nav id="page-navigation" class="mb-xl" aria-label="Page Navigation">
+                                <h5>Page Navigation</h5>
+                                <div class="body">
+                                    <ul class="sidebar-page-nav menu">
+                                        <li class="page-nav-item h1">
+                                            <a href="#bkmrk-spawning-in-items" class="text-limit-lines-1 block">Spawning in items</a>
+                                            <div class="link-background sidebar-page-nav-bullet"></div>
+                                        </li>
+                                        <li class="page-nav-item h1">
+                                            <a href="#bkmrk-admin-abuse" class="text-limit-lines-1 block">Admin Abuse</a>
+                                            <div class="link-background sidebar-page-nav-bullet"></div>
+                                        </li>
+                                        <li class="page-nav-item h1">
+                                            <a href="#bkmrk-flying-around" class="text-limit-lines-1 block">Flying around</a>
+                                            <div class="link-background sidebar-page-nav-bullet"></div>
+                                        </li>
+                                        <li class="page-nav-item h1">
+                                            <a href="#bkmrk-warnings" class="text-limit-lines-1 block">Warnings</a>
+                                            <div class="link-background sidebar-page-nav-bullet"></div>
+                                        </li>
+                                        <li class="page-nav-item h1">
+                                            <a href="#bkmrk-etiquette%C2%A0" class="text-limit-lines-1 block">Etiquette</a>
+                                            <div class="link-background sidebar-page-nav-bullet"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <nav id="book-tree" class="book-tree mb-xl" aria-label="Book Navigation">
+
+                                <h5>Book Navigation</h5>
+
+                                <ul class="sidebar-page-list mt-xs menu entity-list">
+                                    <li class="list-item-book book">
+                                        <a href="./general-info.html" class="book   entity-list-item" data-entity-type="book" data-entity-id="28">
+                                            <span role="presentation" class="icon text-book"><svg class="svg-icon" data-icon="book" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path fill="none" d="M0 0h24v24H0z" />
+                                                    <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2M6 4h5v8l-2.5-1.5L6 12z" /></svg></span>
+                                            <div class="content">
+                                                <h4 class="entity-list-item-name break-text">General Info</h4>
+
+                                            </div>
+                                        </a> </li>
+
+                                    <li class="list-item-page page ">
+                                        <a href="./guidelines.html" class="page  selected entity-list-item" data-entity-type="page" data-entity-id="116">
+                                            <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path fill="none" d="M0 0h24v24H0z" />
+                                                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z" /></svg></span>
+                                            <div class="content">
+                                                <h4 class="entity-list-item-name break-text">Guidelines</h4>
+
+                                            </div>
+                                        </a>
+
+                                    </li>
+                                    <li class="list-item-page page ">
+                                        <a href="./useful-commands.html" class="page   entity-list-item" data-entity-type="page" data-entity-id="118">
+                                            <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path fill="none" d="M0 0h24v24H0z" />
+                                                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z" /></svg></span>
+                                            <div class="content">
+                                                <h4 class="entity-list-item-name break-text">Useful Commands</h4>
+
+                                            </div>
+                                        </a>
+
+                                    </li>
+                                    <li class="list-item-page page ">
+                                        <a href="./moderation.html" class="page   entity-list-item" data-entity-type="page" data-entity-id="117">
+                                            <span role="presentation" class="icon text-page"><svg class="svg-icon" data-icon="page" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path fill="none" d="M0 0h24v24H0z" />
+                                                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z" /></svg></span>
+                                            <div class="content">
+                                                <h4 class="entity-list-item-name break-text">Moderation</h4>
+
+                                            </div>
+                                        </a>
+
+                                    </li>
+                                </ul>
+                            </nav>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" tri-layout-middle">
+                <div id="main-content" class="tri-layout-middle-contents">
+
+                    <div class="mb-m print-hidden">
+                        <nav class="breadcrumbs text-center" aria-label="Breadcrumb">
+
+
+
+
+                            <a href="../shelves" class="text-bookshelf icon-list-item outline-hover">
+                                <span><svg class="svg-icon" data-icon="bookshelf" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path fill="none" d="M1.088 2.566h17.42v17.42H1.088z" />
+                                        <path d="M4 20.058h15.892V22H4z" />
+                                        <path fill="none" d="M2.902 1.477h17.42v17.42H2.903z" />
+                                        <path d="M6.658 3.643V18h-2.38V3.643zm4.668 0V18H8.947V3.643zm3.396.213 5.613 13.214-2.19.93-5.613-13.214z" /></svg></span>
+                                <span>Shelves</span>
+                            </a>
+
+
+
+                            <div components="dropdown dropdown-search" option:dropdown-search:url="/search/entity/siblings?entity_type=bookshelf&entity_id=8" option:dropdown-search:local-search-selector=".entity-list-item" class="dropdown-search">
+                                <button class="dropdown-search-toggle-breadcrumb" refs="dropdown@toggle" aria-haspopup="true" aria-expanded="false" title="Navigate siblings for shelf">
+                                    <div role="presentation" class="separator"><svg class="svg-icon" data-icon="chevron-right" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                                            <path d="M0 0h24v24H0z" fill="none" /></svg></div>
+                                </button>
+                                <div refs="dropdown@menu" class="dropdown-search-dropdown card">
+                                    <div class="dropdown-search-search">
+                                        <svg class="svg-icon" data-icon="search" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14" />
+                                            <path fill="none" d="M0 0h24v24H0z" /></svg> <input refs="dropdown-search@searchInput" aria-label="Search" autocomplete="off" placeholder="Search" type="text">
+                                    </div>
+                                    <div refs="dropdown-search@loading">
+                                        <div class="loading-container">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div refs="dropdown-search@listContainer" class="dropdown-search-list px-m" tabindex="-1" role="list"></div>
+                                </div>
+                            </div> <a href="../shelves/raid-sim" class="text-bookshelf icon-list-item outline-hover">
+                                <span><svg class="svg-icon" data-icon="bookshelf" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path fill="none" d="M1.088 2.566h17.42v17.42H1.088z" />
+                                        <path d="M4 20.058h15.892V22H4z" />
+                                        <path fill="none" d="M2.902 1.477h17.42v17.42H2.903z" />
+                                        <path d="M6.658 3.643V18h-2.38V3.643zm4.668 0V18H8.947V3.643zm3.396.213 5.613 13.214-2.19.93-5.613-13.214z" /></svg></span>
+                                <span>
+                                    Raid Sim
+                                </span>
+                            </a>
+
+
+                            <div components="dropdown dropdown-search" option:dropdown-search:url="/search/entity/siblings?entity_type=book&entity_id=28" option:dropdown-search:local-search-selector=".entity-list-item" class="dropdown-search">
+                                <button class="dropdown-search-toggle-breadcrumb" refs="dropdown@toggle" aria-haspopup="true" aria-expanded="false" title="Navigate siblings for book">
+                                    <div role="presentation" class="separator"><svg class="svg-icon" data-icon="chevron-right" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                                            <path d="M0 0h24v24H0z" fill="none" /></svg></div>
+                                </button>
+                                <div refs="dropdown@menu" class="dropdown-search-dropdown card">
+                                    <div class="dropdown-search-search">
+                                        <svg class="svg-icon" data-icon="search" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14" />
+                                            <path fill="none" d="M0 0h24v24H0z" /></svg> <input refs="dropdown-search@searchInput" aria-label="Search" autocomplete="off" placeholder="Search" type="text">
+                                    </div>
+                                    <div refs="dropdown-search@loading">
+                                        <div class="loading-container">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div refs="dropdown-search@listContainer" class="dropdown-search-list px-m" tabindex="-1" role="list"></div>
+                                </div>
+                            </div> <a href="../books/general-info" class="text-book icon-list-item outline-hover">
+                                <span><svg class="svg-icon" data-icon="book" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2M6 4h5v8l-2.5-1.5L6 12z" /></svg></span>
+                                <span>
+                                    General Info
+                                </span>
+                            </a>
+
+
+
+                            <div components="dropdown dropdown-search" option:dropdown-search:url="/search/entity/siblings?entity_type=page&entity_id=116" option:dropdown-search:local-search-selector=".entity-list-item" class="dropdown-search">
+                                <button class="dropdown-search-toggle-breadcrumb" refs="dropdown@toggle" aria-haspopup="true" aria-expanded="false" title="Navigate siblings for page">
+                                    <div role="presentation" class="separator"><svg class="svg-icon" data-icon="chevron-right" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                                            <path d="M0 0h24v24H0z" fill="none" /></svg></div>
+                                </button>
+                                <div refs="dropdown@menu" class="dropdown-search-dropdown card">
+                                    <div class="dropdown-search-search">
+                                        <svg class="svg-icon" data-icon="search" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14" />
+                                            <path fill="none" d="M0 0h24v24H0z" /></svg> <input refs="dropdown-search@searchInput" aria-label="Search" autocomplete="off" placeholder="Search" type="text">
+                                    </div>
+                                    <div refs="dropdown-search@loading">
+                                        <div class="loading-container">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div refs="dropdown-search@listContainer" class="dropdown-search-list px-m" tabindex="-1" role="list"></div>
+                                </div>
+                            </div> <a href="../books/general-info/page/guidelines" class="text-page icon-list-item outline-hover">
+                                <span><svg class="svg-icon" data-icon="page" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z" /></svg></span>
+                                <span>
+                                    Guidelines
+                                </span>
+                            </a>
+                        </nav>
+                    </div>
+
+                    <main class="content-wrap card">
+                        <div component="page-display" option:page-display:page-id="116" class="page-content clearfix">
+                            <div dir="auto">
+
+                                <h1 class="break-text" id="bkmrk-page-title">Guidelines</h1>
+
+                                <div style="clear:left;"></div>
+
+                                <h4 dir="ltr" id="bkmrk-spawning-in-items"><strong><span style="color:rgb(132,63,161);">Spawning in items</span></strong></h4>
+                                <p dir="ltr" id="bkmrk-admins-and-above-are"><span style="background-color:rgb(255,255,255);color:rgb(224,62,45);"><strong>Admins </strong></span>and above are allowed to use the items menu to spawn in items within the lobby. This is strictly not for Moderators as they need to prove they can follow our rules before being promoted. If they can’t follow this rule, they can’t be trusted as an admin. Admins may spawn in anything from the items menu including fireworks but don't spawn in more than 1 or 2 at a time. Be reasonable, we're allowing this rule for you to have some fun and interact with the players. Abuse it, you lose it. </p>
+                                <h4 dir="ltr" id="bkmrk-admin-abuse"><strong><span style="color:rgb(132,63,161);">Admin Abuse</span></strong></h4>
+                                <p dir="ltr" id="bkmrk-we-all-make-mistakes">We all make mistakes and hit the wrong bind sometimes or forget to turn off god mode. If this happens to you, type sorry in chat to protect yourself from admin abuse claims as the chat logs will work as evidence in your favour. Staff found to have abused their powers will be blacklisted from admining on all servers and perm banned from Raid Simulator.</p>
+                                <h4 dir="ltr" id="bkmrk-flying-around"><strong><span style="color:rgb(132,63,161);">Flying around</span></strong></h4>
+                                <p dir="ltr" id="bkmrk-if-you-are-in-vanish">If you are in Vanish and are flying around, you are still a physical object. Do not fly through gunfire in Vanish so you don't block bullets and rockets. Use debug camera instead to avoid interfering with the raid. Obviously you can still use Vanish while above a fight or while using /who. </p>
+                                <h4 dir="ltr" id="bkmrk-warnings"><strong><span style="color:rgb(132,63,161);">Warnings</span></strong></h4>
+                                <p dir="ltr" id="bkmrk-raid-simulator-is-a-">Raid Simulator is a chill server to hang out on when taking a break from, or preparing for the sweaty shitshow that is standard rust servers. PLEASE give warnings wherever possible. You will find that most people are actually very understanding if you are nice to them. Even if you don’t think they can speak English, try and warn them.</p>
+                                <h4 dir="ltr" id="bkmrk-etiquette%C2%A0"><strong><span style="color:rgb(132,63,161);">Etiquette </span></strong></h4>
+                                <p dir="ltr" id="bkmrk-general-regulations-"><strong>General regulations to follow:</strong><br></p>
+                                <ul id="bkmrk-treat-players-and-st">
+                                    <li>
+                                        <p dir="ltr">Treat players and staff fairly and equally. Respect all members of staff and the community regardless of your opinion of them. </p>
+                                    </li>
+                                    <li>
+                                        <p dir="ltr">Do not have an attitude when dealing with players, you will only make the situation more difficult to settle.</p>
+                                    </li>
+                                    <li>
+                                        <p dir="ltr">Keep your opinions to staff chats - not in the public sector. This also includes declining suggestions, these are up to management to implement.</p>
+                                    </li>
+                                    <li>
+                                        <p dir="ltr">Be active in our staff discord and in game, your activity will be reviewed regularly by our Leadership team. </p>
+                                    </li>
+                                    <li>
+                                        <p dir="ltr">Anything said within staff channels does not leave staff channels.</p>
+                                    </li>
+                                    <li>
+                                        <p dir="ltr">Staff cannot enter VIP giveaways. Please do not react to the giveaway bot, if you win, it will be re-rolled regardless.</p>
+                                    </li>
+                                    <li>
+                                        <p dir="ltr">Your Discord and Battlemetrics names must be the same. Your steam name should also be the same although if you need to change it to, for example not get recognized on a main server, that’s fine.</p>
+                                    </li>
+                                </ul>
+                                <p id="bkmrk-%C2%A0"> </p>
+                            </div>
+                        </div>
+                        <div component="pointer" option:pointer:page-id="116">
+                            <div id="pointer" refs="pointer@pointer" tabindex="-1" aria-label="Page Section Options" class="pointer-container">
+                                <div class="pointer flex-container-row items-center justify-space-between gap-xs p-xs anim">
+                                    <div refs="pointer@mode-section" class="flex flex-container-row items-center gap-xs">
+                                        <button refs="pointer@mode-toggle" title="Permalink mode, Press to show include tag" class="text-button icon px-xs"><svg class="svg-icon" data-icon="link" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5" /></svg></button>
+                                        <div class="input-group flex flex-container-row items-center">
+                                            <input refs="pointer@link-input" aria-label="Page Section Permalink" readonly="readonly" type="text" id="pointer-url" placeholder="url">
+                                            <button refs="pointer@link-button" class="button outline icon px-xs" type="button" title="Copy Link"><svg class="svg-icon" data-icon="copy" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m0 16H8V7h11z" /></svg></button>
+                                        </div>
+                                    </div>
+                                    <div refs="pointer@mode-section" hidden class="flex flex-container-row items-center gap-xs">
+                                        <button refs="pointer@mode-toggle" title="Include tag mode, Press to show permalink" class="text-button icon px-xs"><svg class="svg-icon" data-icon="include" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <path fill="none" d="M0 .5h24v24H0z" />
+                                                <path d="m12 16.5 4-4h-3v-9h-2v9H8zm9-13h-6v1.99h6v14.03H3V5.49h6V3.5H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2" /></svg></button>
+                                        <div class="input-group flex flex-container-row items-center">
+                                            <input refs="pointer@include-input" aria-label="Page Section Include Tag" readonly="readonly" type="text" id="pointer-include" placeholder="include">
+                                            <button refs="pointer@include-button" class="button outline icon px-xs" type="button" title="Copy Link"><svg class="svg-icon" data-icon="copy" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m0 16H8V7h11z" /></svg></button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button refs="pointer@section-mode-button" class="screen-reader-only">Enter section select mode</button>
+                        </div>
+                    </main>
+
+                    <div id="sibling-navigation" class="grid half collapse-xs items-center mb-m px-m no-row-gap fade-in-when-active print-hidden">
+                        <div>
+                        </div>
+                        <div>
+                            <a href="../books/general-info/page/useful-commands" data-shortcut="next" class="outline-hover no-link-style block rounded text-xs-right">
+                                <div class="px-m pt-xs text-muted text-xs-right">Next</div>
+                                <div class="inline block">
+                                    <div class="icon-list-item no-hover">
+                                        <span class="text-page "><svg class="svg-icon" data-icon="page" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <path fill="none" d="M0 0h24v24H0z" />
+                                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z" /></svg></span>
+                                        <span>Useful Commands</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div component="back-to-top" class="back-to-top print-hidden">
+        <div class="inner">
+            <svg class="svg-icon" data-icon="chevron-up" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+                <path fill="none" d="M0 0h24v24H0z" /></svg> <span>Back to top</span>
+        </div>
+    </div>
+
+    <script src="../dist/app.js?version=v26.05.1" type="module" nonce="uxTSFikquxMltK81pCq8C5ql"></script>
+
+</body>
+
+</html>

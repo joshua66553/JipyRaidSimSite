@@ -1,0 +1,1 @@
+function e(e){return e?.trim()||`Rusticated Moderation KB`}export{e as t};
