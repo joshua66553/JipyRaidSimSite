@@ -1,1 +1,0 @@
-{"version":3,"file":"site-DK3SaLMK.js","sources":["../../../.svelte-kit/output/server/chunks/site.js"],"sourcesContent":["function getSiteName(envName) {\n\treturn envName?.trim() || \"Rusticated Moderation KB\";\n}\n//#endregion\nexport { getSiteName as t };\n"],"names":[],"mappings":"AAAA,SAAS,WAAW,CAAC,OAAO,EAAE;AAC9B,CAAC,OAAO,OAAO,EAAE,IAAI,EAAE,IAAI,0BAA0B;AACrD;;;;"}

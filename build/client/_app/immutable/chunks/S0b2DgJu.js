@@ -1,1 +1,0 @@
-import{D as e,S as t,at as n,k as r,nt as i,tt as a}from"./azTdROIj.js";import"./xihTtKlq.js";var o=r(`<article class="prose-kb rounded-2xl border border-slate-800 bg-slate-900/50 p-6 md:p-8"></article>`);function s(r,s){i(s,!0);var c=o();t(c,()=>s.content.html,!0),n(c),e(r,c),a()}export{s as t};
