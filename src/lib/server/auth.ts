@@ -6,20 +6,18 @@ import { getMemberRoleIds, getGuildId, avatarUrl } from '$lib/server/discord';
 
 /**
  * Auth.js requires a `secret` to sign/encrypt session tokens.
- * In production it MUST come from the AUTH_SECRET environment variable.
+ * In production it comes from the AUTH_SECRET environment variable (read at
+ * runtime via $env/dynamic/private, so it is empty during the build step).
  * In local/preview development we fall back to a stable dev-only value so the
  * app doesn't hard-crash when the env var hasn't been configured yet.
+ *
+ * Note: this must NOT throw at module-load time, otherwise the SvelteKit build
+ * (which imports this module without runtime env vars) would fail.
  */
-function resolveAuthSecret(): string {
+function resolveAuthSecret(): string | undefined {
 	if (env.AUTH_SECRET) return env.AUTH_SECRET;
-	if (dev) {
-		console.warn(
-			'[auth] AUTH_SECRET is not set — using an insecure development fallback. ' +
-				'Set AUTH_SECRET in your environment before deploying to production.'
-		);
-		return 'dev-only-insecure-secret-change-me-in-production';
-	}
-	throw new Error('AUTH_SECRET environment variable is required in production.');
+	if (dev) return 'dev-only-insecure-secret-change-me-in-production';
+	return undefined;
 }
 
 declare module '@auth/core/types' {
